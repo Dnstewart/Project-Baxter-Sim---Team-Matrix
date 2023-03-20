@@ -94,6 +94,7 @@ MonoBehaviour:
   agility: 0.5
   maxSpeed: 5
   movement: {x: 0, y: 0}
+  stopTime: 0
 --- !u!1 &5628686663089876487
 GameObject:
   m_ObjectHideFlags: 0

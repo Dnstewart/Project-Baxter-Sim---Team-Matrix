@@ -18,9 +18,9 @@ public class CarController : MonoBehaviour
 
     [SerializeField]
     private Vector2 movement;
-    [SerializeField]
-    private float range = 3f;
-    private float stopTime = 0;
+
+    private float range = 2.5f;
+    public float stopTime = 0;
 
     private void Awake()
     {
@@ -61,7 +61,7 @@ public class CarController : MonoBehaviour
 
         if (nearestPed != null && shortestDistance <= range)
         {
-            this.stopTime = 3f;
+            this.stopTime = .1f;
 
         }
 
@@ -74,11 +74,14 @@ public class CarController : MonoBehaviour
             this.speed = 20;
         }
     }
-
+    
     private void Update()
     {
         pedestrianUpdate();
-        this.stopTime -= Time.deltaTime;
+        if (this.stopTime > 0)
+        {
+            this.stopTime -= Time.deltaTime;
+        }
 
     }
 
