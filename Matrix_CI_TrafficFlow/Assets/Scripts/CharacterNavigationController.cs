@@ -12,9 +12,13 @@ public class CharacterNavigationController : MonoBehaviour
     private Vector3 destination;
     public float stopDistance = .1f;
     public float rotationSpeed = 0.5f;
+    public bool isPed = false;
+    public float rotationSpeed = 0.5f;
+    public float rotationSpeed = 0f;
 
     [SerializeField]
     private float range = 3f;
+    [SerializeField]
     private float stopTime = 0;
     // Start is called before the first frame update
 
@@ -64,6 +68,14 @@ public class CharacterNavigationController : MonoBehaviour
         }
         loc = transform.position;
 
+        if (isPed)
+        {
+            //pedestrianUpdate();
+        }
+        else
+        {
+            carUpdate();
+        }
     }
 
     public void SetDestination(Vector3 destination)
@@ -72,7 +84,7 @@ public class CharacterNavigationController : MonoBehaviour
         this.reachedDestination = false;
     }
 
-    private void pedestrianUpdate()
+    private void carUpdate()
     {
         GameObject[] peds = GameObject.FindGameObjectsWithTag("Pedestrian");
         float shortestDistance = Mathf.Infinity;
@@ -91,17 +103,22 @@ public class CharacterNavigationController : MonoBehaviour
 
         if (nearestPed != null && shortestDistance <= range)
         {
-            this.stopTime = 3f;
-
+            this.stopTime = 3f + Time.fixedTime;
         }
-
-        if (this.stopTime > 0)
+        if (this.stopTime > Time.fixedTime)
         {
             this.moveSpeed = 0;
+
         }
         else
         {
             this.moveSpeed = 2;
+
         }
     }
+
+    private void pedestrianUpdate()
+    {
+
+    } 
 }

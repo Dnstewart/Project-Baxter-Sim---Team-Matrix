@@ -42,7 +42,7 @@ public class WaypointNav : MonoBehaviour
             }
         }
 
-        targetExit = nearestExit;
+        this.targetExit = nearestExit;
     }
 
     private void findVehicleExits()
@@ -63,7 +63,7 @@ public class WaypointNav : MonoBehaviour
             }
         }
 
-        targetExit = nearestExit;
+        this.targetExit = nearestExit;
     }
 
     private void selectBranch()
@@ -73,7 +73,7 @@ public class WaypointNav : MonoBehaviour
 
             foreach (Waypoint branch in currentWaypoint.branches)
             {
-                float branchDistance = Vector3.Distance(branch.transform.position, targetExit.transform.position);
+                float branchDistance = Vector3.Distance(branch.transform.position, this.targetExit.transform.position);
 
                 if (branchDistance < shortestDistance)
                 {

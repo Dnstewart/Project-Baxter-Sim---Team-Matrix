@@ -8,6 +8,7 @@ public class CarSpawn : MonoBehaviour
     private GameObject car;
     [SerializeField]
     private float time = 5f;
+    private int count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,11 @@ public class CarSpawn : MonoBehaviour
     {
         yield return new WaitForSeconds(interval);
         GameObject newCar = Instantiate(car, gameObject.transform.position, gameObject.transform.rotation);
-        StartCoroutine(SpawnCar(interval, car));
+        count++;
+        if(count != 10)
+        {
+            StartCoroutine(SpawnCar(interval, car));
+        }
+        
     }
 }

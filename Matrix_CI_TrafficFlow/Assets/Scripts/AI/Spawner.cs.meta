@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 46227bf0264a1402fa8a32c95b4c2781
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ethanPrefab: {fileID: 100168, guid: b235179bd2a63d1468dd430670338c55, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
