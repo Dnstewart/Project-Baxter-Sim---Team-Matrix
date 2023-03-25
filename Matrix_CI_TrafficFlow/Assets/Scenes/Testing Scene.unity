@@ -2118,7 +2118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 1177128361914078749, guid: 266855df83342824086876d88185eddf, type: 3}
-  time: 0.5
+  time: 2
 --- !u!1 &432262000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,7 +3170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &693180912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3595,7 +3595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &741690806
 Transform:
   m_ObjectHideFlags: 0
@@ -7246,7 +7246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1600524302
 MonoBehaviour:
   m_ObjectHideFlags: 0

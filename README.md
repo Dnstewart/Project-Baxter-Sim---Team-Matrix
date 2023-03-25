@@ -23,6 +23,7 @@ RELEASE NOTES
 	Added a start to the emergency service vehicles.
 	Added basic pedestrian spawners
 	Added Baxter arena model, surrounding road, and side walk models.
+	Added a pause button, which is P.
 	updated car and pedestrian behavior.
 	updated waypoint system.
 
