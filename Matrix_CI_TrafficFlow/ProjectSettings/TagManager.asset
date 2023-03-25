@@ -9,6 +9,7 @@ TagManager:
   - Car
   - exitCar
   - exitPed
+  - EmgServ
   layers:
   - Default
   - TransparentFX
