@@ -6,6 +6,9 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject ethanPrefab;
+
+    public GameObject resourceManager;
+
     [SerializeField]
     private float ethanInterval = 2.5f;
     // Start is called before the first frame update
@@ -13,14 +16,8 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(spawnEthan(ethanInterval, ethanPrefab));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
-
     private IEnumerator spawnEthan(float interval, GameObject person)
     {
         yield return new WaitForSeconds(interval);
@@ -29,6 +26,7 @@ public class Spawner : MonoBehaviour
         if (count != 10)
         {
             StartCoroutine(spawnEthan(interval, person));
+            resourceManager.GetComponent<ResourceManager>().pedCount++;
         }
     }
 }

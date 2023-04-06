@@ -12,8 +12,8 @@ public class ResourceManager : MonoBehaviour
     // Stored data
     public static float seconds;
     public static float minutes;
-    public static int carCount;
-    public static int pedCount;
+    public int carCount;
+    public int pedCount;
 
     // will start Sim
     public static bool readyUp = false;

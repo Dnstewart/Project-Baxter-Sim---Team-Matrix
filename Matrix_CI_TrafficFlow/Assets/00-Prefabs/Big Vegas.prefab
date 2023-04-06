@@ -884,6 +884,7 @@ GameObject:
   - component: {fileID: 1312659483496030230}
   - component: {fileID: 1312659483496030231}
   - component: {fileID: 1312659483496030228}
+  - component: {fileID: 3971784112648863774}
   m_Layer: 0
   m_Name: Big Vegas
   m_TagString: Untagged
@@ -900,7 +901,7 @@ Transform:
   m_GameObject: {fileID: 2231226894050822597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -21.058422, y: 0, z: -30.13359}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1043394808643587129}
@@ -966,6 +967,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWaypoint: {fileID: 0}
   targetExit: {fileID: 0}
+--- !u!95 &3971784112648863774
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231226894050822597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14852edb40ae344ce9c0ac081dd1d34d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2314378755409643165
 GameObject:
   m_ObjectHideFlags: 0
