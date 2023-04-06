@@ -24,10 +24,21 @@ RELEASE NOTES
 	Added basic pedestrian spawners
 	Added Baxter arena model, surrounding road, and side walk models.
 	Added a pause button, which is P.
-	updated car and pedestrian behavior.
-	updated waypoint system.
+	Updated car and pedestrian behavior.
+	Updated waypoint system.
 
+Mar 22 2023
+This file outlines the code submission for Milestone 3 from team Matrix.
 
+RELEASE NOTES
+	Added weather (rain and snow).
+	Added a moveable camera (wasd to move location and right click drag to pan).
+	Added streets to baxter model.
+	Added parking lots.
+	Added basic spawners to the baxter model.
+	Added a temporary pedestrian model with running animation.
+	Updated UI to increase pedestrian count.
+	Updated pedestrian spawners(now working).
 
 The end goal for this project is to be able to simulate traffic flow and
 pedestrian interaction with traffic using the waypoint system and basic
