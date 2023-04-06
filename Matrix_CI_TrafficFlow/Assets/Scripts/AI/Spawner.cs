@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
     private IEnumerator spawnEthan(float interval, GameObject person)
     {
         yield return new WaitForSeconds(interval);
-        GameObject newEthan = Instantiate(person, new Vector3(Random.Range(-5f, 5), 1, 0), Quaternion.identity);
+        GameObject newEthan = Instantiate(person, gameObject.transform.position, gameObject.transform.rotation);
         count++;
         if (count != 10)
         {
