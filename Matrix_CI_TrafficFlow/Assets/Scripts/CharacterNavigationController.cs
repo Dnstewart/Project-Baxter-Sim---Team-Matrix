@@ -1,37 +1,99 @@
-using System.Collections;
-using System.Collections.Generic;
+//Character Navigation Controller
+/** 
+ * This class makes models move to a specific location and is used as a component for objects.
+ * Paired with the Waypoint Nav class it Changes locations.
+ * Made by Team Matrix
+ */
+
+// IMPORTS
+/** 
+ * Main unity engine import. 
+ */
 using UnityEngine;
 
 public class CharacterNavigationController : MonoBehaviour
 {
+    // VARIABLES
+
+    /**
+     * The flag for if a destination was reached.
+     */
     public bool reachedDestination = false;
 
+    /**
+     * The Current location of an object.
+     */
     private Vector3 loc;
+
+    /**
+     * The movment speed of an object
+     */
     public float moveSpeed = 5.0f;
+
+    /** 
+     * The waypoint nav component reference.
+     */
     private WaypointNav waypointCon;
+
+    /**
+     * The current destination.
+     */
     private Vector3 destination;
+
+    /** 
+     * The stop distance from the destination.
+     */
     public float stopDistance = .1f;
+
+    /**
+     * The object rotation speed.
+     */
     public float rotationSpeed = 0.5f;
+
+    /**
+     * The flag for determining a pedestrian
+     */
     public bool isPed = false;
+
+    /**
+     * The flag for determining a emergency service vehicle.
+     */
     public bool isEmg = false;
 
+    /** 
+     * The range for detecting cars or peds.
+     */
     [SerializeField]
     private float range = 3f;
+
+    /**
+     * The range for detecting emergency services.
+     */
     [SerializeField]
     private float rangeEmg = 5f;
+
+    /**
+     * The time spent stopped
+     */
     [SerializeField]
     private float stopTime = 0;
-    // these are for testing a car to ignore a pedestiran not moving and for it to keep going
+
+    /**
+     * Testing variables
+     */
     public Vector3 tempV3Ped;
     public int countPed = 0;
     public bool keepGoingTestPed = false;
-
     public Vector3 tempV3Emg;
     public int countEmg = 0;
     public bool keepGoingTestEmg = false;
-    // Start is called before the first frame update
 
-    private void Awake()
+    // AWAKE
+    /**
+     * Upon object creation or simulation start the object 
+     * will get inital information about location and waypoint navigation. 
+     */
+    public void Awake()
     {
         waypointCon = GetComponent<WaypointNav>();
         loc = transform.position;
@@ -52,14 +114,17 @@ public class CharacterNavigationController : MonoBehaviour
         }
     }
 
-    void Start()
+    //UPDATE
+    /**
+     * This method is called once every frame.
+     * It does different actions based on the car and ped flags that are active.
+     */
+    public void Update()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        /**
+         * Get destination dstance and rotate model towards destination.
+         * Check if the destination was reached. 
+         */
         Vector3 destinationDirection = destination - transform.position;
         destinationDirection.y = 0;
         float destinationDistance = destinationDirection.magnitude;
@@ -77,6 +142,9 @@ public class CharacterNavigationController : MonoBehaviour
         }
         loc = transform.position;
 
+        /**
+         * check the isPed and isEmg flags to call correct subsequent method.
+         */
         if (isPed)
         {
             pedestrianUpdate();
@@ -91,14 +159,28 @@ public class CharacterNavigationController : MonoBehaviour
         }
     }
 
+    // SET DESTINATION
+    /**
+    * A Method to set a new destination.
+    * 
+    * PARAM: Vector3 destination (The next destination to be set)
+    */
     public void SetDestination(Vector3 destination)
     {
         this.destination = destination;
         this.reachedDestination = false;
     }
 
+    // CARUPDATE
+    /**
+     * This method will stop a car when it detects pedestrians, 
+     * emergency services, or other cars.
+     */
     private void carUpdate()
     {
+        /**
+         * The setting of inital references and shortest distances for the nearby pedestrians and EMG's.
+         */
         GameObject[] peds = GameObject.FindGameObjectsWithTag("Pedestrian");
         GameObject[] emgs = GameObject.FindGameObjectsWithTag("EmgServ");
         float shortestDistancePed = Mathf.Infinity;
@@ -141,9 +223,14 @@ public class CharacterNavigationController : MonoBehaviour
 
             }
         }
+        /**
+         * Checks if a ped or emg is in range of the car and stops it for an aloted time.
+         */
         if (shortestDistancePed < shortestDistanceEmg)
-        { 
-           // check pedestrian
+        {
+            /**
+             * Check pedestrian
+             */
             if (nearestPed != null && shortestDistancePed <= range)
             {
                 this.stopTime = 1.5f + Time.fixedTime;
@@ -175,7 +262,9 @@ public class CharacterNavigationController : MonoBehaviour
         }
         else
         {
-            // check emg services
+            /**
+             * Check emg services
+             */
             if (nearestEmg != null && shortestDistanceEmg <= rangeEmg)
             {
                 this.stopTime = 1f + Time.fixedTime;
@@ -207,8 +296,15 @@ public class CharacterNavigationController : MonoBehaviour
         }
     }
 
+    // PEDESTRIAN UPDATE
+    /**
+    * This method will stop a ped when it detects emergency services.
+    */
     private void pedestrianUpdate()
     {
+        /**
+        * The setting of inital references and shortest distances for the nearby EMG's.
+        */
         GameObject[] emgs = GameObject.FindGameObjectsWithTag("EmgServ");
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEmg = null;
@@ -230,7 +326,9 @@ public class CharacterNavigationController : MonoBehaviour
 
             }
         }
-
+        /**
+        * Checks if a emg is in range of ped and stops it for an aloted time.
+        */
         if (nearestEmg != null && shortestDistance <= rangeEmg)
         {
             this.stopTime = 2f + Time.fixedTime;
@@ -259,10 +357,5 @@ public class CharacterNavigationController : MonoBehaviour
             this.countEmg = 0;
             keepGoingTestEmg = false;
         }
-    } 
-
-    void StopPed()
-    {
-
     }
 }
