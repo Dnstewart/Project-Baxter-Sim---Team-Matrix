@@ -12,6 +12,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6170186983525356161, guid: 237938799d36c44a1b033e9e1ad02f65, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170186983525356161, guid: 237938799d36c44a1b033e9e1ad02f65, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170186983525356161, guid: 237938799d36c44a1b033e9e1ad02f65, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170186983525356161, guid: 237938799d36c44a1b033e9e1ad02f65, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.551468
       objectReference: {fileID: 0}
@@ -53,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6839623072408193083, guid: 237938799d36c44a1b033e9e1ad02f65, type: 3}
       propertyPath: m_Name
-      value: The Boss Running Final
+      value: The Boss Running Final Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 237938799d36c44a1b033e9e1ad02f65, type: 3}
