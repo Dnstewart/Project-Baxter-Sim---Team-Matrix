@@ -18,22 +18,19 @@ public class Spawner : MonoBehaviour
     private int count = 0;
     void Start()
     {
-        StartCoroutine(spawnEthan(ethanInterval, ethanPrefab));
-        StartCoroutine(spawnEthan(ethanInterval, theBossPrefab));
+        StartCoroutine(SpawnEthan(ethanInterval, ethanPrefab));
+        //StartCoroutine(SpawnEthan(ethanInterval, theBossPrefab));
         
     }
-    private IEnumerator spawnEthan(float interval, GameObject person)
+    private IEnumerator SpawnEthan(float interval, GameObject person)
     {
         yield return new WaitForSeconds(interval);
         GameObject newEthan = Instantiate(person, gameObject.transform.position, gameObject.transform.rotation);
-        GameObject newBoss = Instantiate(person, gameObject.transform.position, gameObject.transform.rotation);
 
         count++;
         if (count != 250)
         {
-            StartCoroutine(spawnEthan(interval, person));
-            StartCoroutine(spawnEthan(interval, person));
-            resourceManager.GetComponent<ResourceManager>().pedCount++;
+            StartCoroutine(SpawnEthan(interval, person));
             resourceManager.GetComponent<ResourceManager>().pedCount++;
 
         }

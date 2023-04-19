@@ -19,9 +19,32 @@ public class WaypointNav : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-      controller.SetDestination(currentWaypoint.GetPosition());
+        if (currentWaypoint == null)
+        {
+            findStartPoint();
+        }
+   
+        controller.SetDestination(currentWaypoint.GetPosition());
         gameObject.transform.LookAt(currentWaypoint.GetPosition());
+    }
+
+    private void findStartPoint()
+    {
+        GameObject[] startingPoints = GameObject.FindGameObjectsWithTag("startPoint");
+
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestStart = null;
+        foreach (GameObject point in startingPoints)
+        {
+            float startDistance = Vector3.Distance(transform.position, point.transform.position);
+
+            if (startDistance < shortestDistance)
+            {
+                shortestDistance = startDistance;
+                nearestStart = point;
+            }
+        }
+        this.currentWaypoint = nearestStart.GetComponent<Waypoint>();
     }
 
     private void findPedestrianExits()
