@@ -27,7 +27,7 @@ RELEASE NOTES
 	Updated car and pedestrian behavior.
 	Updated waypoint system.
 
-Mar 22 2023
+Apr 5 2023
 This file outlines the code submission for Milestone 3 from team Matrix.
 
 RELEASE NOTES
@@ -39,6 +39,21 @@ RELEASE NOTES
 	Added a temporary pedestrian model with running animation.
 	Updated UI to increase pedestrian count.
 	Updated pedestrian spawners(now working).
+
+Apr 19 2023
+This file outlines the code submission for Milestone 4 from team Matrix.
+
+RELEASE NOTES
+	Added Car Waypoints.
+	Added Car exits.
+	Added Pedestrian waypoints.
+	Added Pedestrian exits.
+	Added sidewalks to baxter model.
+	Added starting parking lot lines.
+	Added a FPS meter to monitor proformance
+	Updated spawners.
+	Updated waypoint nav script.
+
 
 The end goal for this project is to be able to simulate traffic flow and
 pedestrian interaction with traffic using the waypoint system and basic
