@@ -11,6 +11,7 @@ TagManager:
   - exitPed
   - EmgServ
   - Manager
+  - startPoint
   layers:
   - Default
   - TransparentFX

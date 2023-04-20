@@ -11,6 +11,8 @@ public class WaypointNav : MonoBehaviour
 
     public GameObject targetExit;
 
+    private ResourceManager manager;
+
     private void Awake()
     {
         //controller = GetComponent<NavMeshAgent>();
@@ -26,6 +28,8 @@ public class WaypointNav : MonoBehaviour
    
         controller.SetDestination(currentWaypoint.GetPosition());
         gameObject.transform.LookAt(currentWaypoint.GetPosition());
+
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<ResourceManager>();
     }
 
     private void findStartPoint()
@@ -127,6 +131,14 @@ public class WaypointNav : MonoBehaviour
             if(currentWaypoint == null)
             {
                 Destroy(gameObject);
+                if(gameObject.tag == "Pedestrian")
+                {
+                    manager.pedCount--;
+                }
+                else if (gameObject.tag == "Car")
+                {
+                    manager.carCount--;
+                }
             }
             else
             {

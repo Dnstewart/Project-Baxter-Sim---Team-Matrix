@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: -3615766843926040848}
   m_Layer: 0
   m_Name: Big Vegas@Running
-  m_TagString: Untagged
+  m_TagString: Pedestrian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 957560529608565430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2145397047438763850}
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWaypoint: {fileID: 0}
-  targetExit: {fileID: 381194647686757419, guid: 3c58fd16f557cac44a6f332875171257, type: 3}
+  targetExit: {fileID: 0}
 --- !u!114 &110507428651648316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,12 +322,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reachedDestination: 0
   moveSpeed: 5
-  stopDistance: 0.1
-  rotationSpeed: 0.5
+  stopDistance: 0.2
+  rotationSpeed: 300
   isPed: 0
   isEmg: 0
-  range: 3
-  rangeEmg: 5
+  range: 5
+  rangeEmg: 10
   stopTime: 0
   tempV3Ped: {x: 0, y: 0, z: 0}
   countPed: 0
