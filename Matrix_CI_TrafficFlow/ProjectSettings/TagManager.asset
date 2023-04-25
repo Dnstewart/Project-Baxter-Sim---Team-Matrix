@@ -12,6 +12,9 @@ TagManager:
   - EmgServ
   - Manager
   - startPoint
+  - TargetCar
+  - parkPed
+  - parkCar
   layers:
   - Default
   - TransparentFX
