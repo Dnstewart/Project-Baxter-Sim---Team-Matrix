@@ -4,10 +4,35 @@ using UnityEngine;
 
 public class DriverDetection : MonoBehaviour
 {
-    // Update is called once per frame
-    /*void Update()
+    public float range = .5f;
+
+    private CharacterNavigationController control;
+
+    private float origMoveSpeed;
+
+    private float stopTime = 0;
+
+    public void Awake()
     {
-        GameObject[] peds = GameObject.FindGameObjectsWithTag("Pedestrian");
+        control = gameObject.GetComponent<CharacterNavigationController>();
+        Debug.Log(gameObject.tag);
+        if (gameObject.tag == "parkCar")
+        {
+            Debug.Log("hi");
+            //this.origMoveSpeed = this.control.moveSpeed;
+            //this.control.moveSpeed = 0;
+            this.control.enabled = false;
+        }
+        else
+        {
+            this.enabled = false;
+        }
+    }
+
+    // Update is called once per frame
+    public void Update()
+    {
+        GameObject[] peds = GameObject.FindGameObjectsWithTag("closePed");
         float shortestDistancePed = Mathf.Infinity;
         GameObject nearestPed = null;
 
@@ -26,26 +51,13 @@ public class DriverDetection : MonoBehaviour
         {
             this.stopTime = 1.5f + Time.fixedTime;
         }
-        else
-        {
-            countPed = 0;
-        }
+
         if (this.stopTime > Time.fixedTime)
         {
-            this.moveSpeed = 0;
-            if (this.countPed < 5 && keepGoingTestPed)
-            {
-                this.countPed++;
-            }
-            else if (this.countPed >= 5)
-            {
-                this.moveSpeed = 2;
-            }
+            //this.control.moveSpeed = this.origMoveSpeed;
+            this.enabled = false;
+            this.control.enabled = true;
+            gameObject.tag = "Car";
         }
-        else
-        {
-            this.moveSpeed = 2;
-            this.countPed = 0;
-        }
-    }*/
+    }
 }

@@ -324,7 +324,7 @@ MonoBehaviour:
   moveSpeed: 5
   stopDistance: 0.2
   rotationSpeed: 300
-  isPed: 0
+  isPed: 1
   isEmg: 0
   range: 5
   rangeEmg: 10

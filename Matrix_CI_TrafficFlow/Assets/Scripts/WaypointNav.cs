@@ -12,6 +12,7 @@ public class WaypointNav : MonoBehaviour
     public GameObject targetExit;
 
     private ResourceManager manager;
+    private bool pedCloseFlag = false;
 
     private void Awake()
     {
@@ -97,41 +98,49 @@ public class WaypointNav : MonoBehaviour
     {
         Waypoint closestBranch = null;
         float shortestDistance = Mathf.Infinity;
+        foreach (Waypoint branch in currentWaypoint.branches)
+        {
+            float branchDistance = Vector3.Distance(branch.transform.position, this.targetExit.transform.position);
 
-            foreach (Waypoint branch in currentWaypoint.branches)
+            if (branchDistance < shortestDistance)
             {
-                float branchDistance = Vector3.Distance(branch.transform.position, this.targetExit.transform.position);
-
-                if (branchDistance < shortestDistance)
-                {
-                    shortestDistance = branchDistance;
-                    closestBranch = branch;
-                }
+                shortestDistance = branchDistance;
+                closestBranch = branch;
             }
-
+        }
         currentWaypoint.nextWaypoint = closestBranch;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(gameObject.tag == "Car")
+        if (gameObject.tag == "Car")
         {
             findVehicleExits();
         }
-        else if (gameObject.tag == "Pedestrian")
+        else if (gameObject.tag == "Pedestrian" || gameObject.tag == "closePed")
         {
             findPedestrianExits();
         }
 
-
-        if(controller.reachedDestination)
+        if (currentWaypoint != null && currentWaypoint.nextWaypoint == null && !pedCloseFlag)
         {
-
-            if(currentWaypoint == null)
+            //test
+            if (gameObject.tag == "Pedestrian")
             {
-                Destroy(gameObject);
-                if(gameObject.tag == "Pedestrian")
+                gameObject.GetComponent<CharacterNavigationController>().moveSpeed = 0;
+                gameObject.tag = "closePed";
+                pedCloseFlag = true;
+            }
+            //test
+        }
+
+        if (controller.reachedDestination)
+        {
+            
+            if (currentWaypoint == null)
+            {
+                if(gameObject.tag == "closePed")
                 {
                     manager.pedCount--;
                 }
@@ -139,6 +148,7 @@ public class WaypointNav : MonoBehaviour
                 {
                     manager.carCount--;
                 }
+                Destroy(gameObject);
             }
             else
             {
@@ -148,9 +158,11 @@ public class WaypointNav : MonoBehaviour
                 }
 
                 currentWaypoint = currentWaypoint.nextWaypoint;
-                controller.SetDestination(currentWaypoint.GetPosition());
+                if(currentWaypoint != null)
+                {
+                    controller.SetDestination(currentWaypoint.GetPosition());
+                }
             }
-            
         }
     }
 }

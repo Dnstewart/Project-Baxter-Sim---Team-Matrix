@@ -15,6 +15,7 @@ TagManager:
   - TargetCar
   - parkPed
   - parkCar
+  - closePed
   layers:
   - Default
   - TransparentFX

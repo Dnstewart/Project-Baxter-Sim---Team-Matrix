@@ -48,7 +48,7 @@ public class CharacterNavigationController : MonoBehaviour
     /**
      * The object rotation speed.
      */
-    public float rotationSpeed = 0.5f;
+    public float rotationSpeed = 300f;
 
     /**
      * The flag for determining a pedestrian
@@ -79,13 +79,28 @@ public class CharacterNavigationController : MonoBehaviour
     private float stopTime = 0;
 
     /**
-     * Testing variables
+     * Testing variable
      */
     public Vector3 tempV3Ped;
+    /**
+    * Testing variables
+    */
     public int countPed = 0;
+    /**
+    * Testing variables
+    */
     public bool keepGoingTestPed = false;
+    /**
+    * Testing variables
+    */
     public Vector3 tempV3Emg;
+    /**
+    * Testing variables
+    */
     public int countEmg = 0;
+    /**
+    * Testing variables
+    */
     public bool keepGoingTestEmg = false;
 
     // AWAKE
