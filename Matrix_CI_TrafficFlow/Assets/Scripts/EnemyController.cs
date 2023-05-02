@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// EnemyController is a solo class that just makes the animations for our pedestrians work.
+/// Made by Team Matrix
+/// </summary>
 public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 8f;
@@ -9,14 +13,20 @@ public class EnemyController : MonoBehaviour
     NavMeshAgent agent;
     Animator animator;
 
-    void Start()
+    /// <summary>
+    /// Start() initalizes the global variables.
+    /// </summary>
+    public void Start()
     {
         target = PlayerManager.Instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    /// <summary>
+    /// Update() activates the animations for each frame.
+    /// </summary>
+    public void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
@@ -38,14 +48,20 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void FaceTarget()
+    /// <summary>
+    /// Make the object face the target.
+    /// </summary>
+    public void FaceTarget()
     {
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-    void OnDrawGizmosSelected ()
+    /// <summary>
+    /// Draws a sphere
+    /// </summary>
+    public void OnDrawGizmosSelected ()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);

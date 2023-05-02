@@ -1,30 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// WaypointNav is used to navigate a Waypoint network. 
+/// For the purpose of the Baxter simulation, it is used in conjunction with CharacterNavigationController.
+/// When an object with this script attached makes it to the target Waypoint in a network, WaypointNav will choose the next location.
+/// Made by Team Matrix
+/// </summary>
 public class WaypointNav : MonoBehaviour
 {
-    //private NavMeshAgent controller;
+    //private NavMeshAgent controller; Were thinking abut using nav mesh agents thats why this is here.
     private CharacterNavigationController controller;
-    public Waypoint currentWaypoint;
+    public Waypoint currentWaypoint; /*!< The objects Current target waypoint. */
 
-    public GameObject targetExit;
+    public GameObject targetExit; /*!< An object that denotes a target exit. */
+
+    public ParkingLot lotTarget; /*!< A parking lot destination. */
 
     private ResourceManager manager;
     private bool pedCloseFlag = false;
 
+    /// <summary>
+    /// When the simulation is started Awake() is called
+    /// </summary>
     private void Awake()
     {
         //controller = GetComponent<NavMeshAgent>();
         controller = GetComponent<CharacterNavigationController>();
     }
-    // Start is called before the first frame update
+
+    /// <summary>
+    /// Start() is called after during the first frame of activation, if the object that the class is attached to 
+    /// does not have a current waypoint then Start() will call findStartPoint() to get a current waypoint.
+    /// Next Start() will call findPedestrianExits() or findVehicleExits() depending on the objects tag and find the closest exit to it.
+    /// </summary>
     void Start()
     {
         if (currentWaypoint == null)
         {
             findStartPoint();
+        }
+
+        if (gameObject.tag == "Pedestrian" || gameObject.tag == "closePed")
+        {
+            findPedestrianExits();
+        }
+
+        if (gameObject.tag == "Car")
+        {
+            findVehicleExits();
         }
    
         controller.SetDestination(currentWaypoint.GetPosition());
@@ -33,6 +57,9 @@ public class WaypointNav : MonoBehaviour
         manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<ResourceManager>();
     }
 
+    /// <summary>
+    /// findStartPoint() finds all objects with the startPoint tag and select the closest one to the object.
+    /// </summary>
     private void findStartPoint()
     {
         GameObject[] startingPoints = GameObject.FindGameObjectsWithTag("startPoint");
@@ -52,27 +79,39 @@ public class WaypointNav : MonoBehaviour
         this.currentWaypoint = nearestStart.GetComponent<Waypoint>();
     }
 
+    /// <summary>
+    /// findPedestrianExits() finds all objects with the parkPed or exitPed tag and select the closest one to the object.
+    /// </summary>
     private void findPedestrianExits()
     {
-        GameObject[] pedestrianExits = GameObject.FindGameObjectsWithTag("exitPed");
+        GameObject[] pedestrianParking = GameObject.FindGameObjectsWithTag("parkPed");
 
         float shortestDistance = Mathf.Infinity;
         GameObject nearestExit = null;
 
-        foreach (GameObject pedExit in pedestrianExits)
+        foreach (GameObject parking in pedestrianParking)
         {
-            float exitDistance = Vector3.Distance(transform.position, pedExit.transform.position);
+            float exitDistance = Vector3.Distance(transform.position, parking.transform.position);
+            //ParkingLot currentLot = parking.GetComponent<ParkingLot>();
 
-            if (exitDistance < shortestDistance)
+            if (exitDistance < shortestDistance /*&& currentLot.availability*/)
             {
                 shortestDistance = exitDistance;
-                nearestExit = pedExit;
+                nearestExit = parking;
             }
         }
 
-        this.targetExit = nearestExit;
+        if (nearestExit != null)
+        {
+            //this.lotTarget = nearestExit.GetComponent<ParkingLot>();
+            //this.lotTarget.assignedMembers++;
+            this.targetExit = nearestExit;
+        }
     }
 
+    /// <summary>
+    /// findVehicleExits() finds all objects with the exitCar tag and select the closest one to the object.
+    /// </summary>
     private void findVehicleExits()
     {
         GameObject[] vehicleExits = GameObject.FindGameObjectsWithTag("exitCar");
@@ -94,6 +133,9 @@ public class WaypointNav : MonoBehaviour
         this.targetExit = nearestExit;
     }
 
+    /// <summary>
+    /// selectBranch() finds the branch path that is closest to the target exit.
+    /// </summary>
     private void selectBranch()
     {
         Waypoint closestBranch = null;
@@ -111,17 +153,13 @@ public class WaypointNav : MonoBehaviour
         currentWaypoint.nextWaypoint = closestBranch;
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update() is called every frame, Each frame Update(), for this class, sees where the object is in the 
+    /// Waypoint network and finds the nest location it will go to. If the objects next Waypoint is null then 
+    /// it will destroy the object when it arrives at the current waypoints location and update the ResourceManager.
+    /// </summary>
     void Update()
     {
-        if (gameObject.tag == "Car")
-        {
-            findVehicleExits();
-        }
-        else if (gameObject.tag == "Pedestrian" || gameObject.tag == "closePed")
-        {
-            findPedestrianExits();
-        }
 
         if (currentWaypoint != null && currentWaypoint.nextWaypoint == null && !pedCloseFlag)
         {

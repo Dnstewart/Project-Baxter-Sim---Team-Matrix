@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
 /// This class is used to detect a pedestrian and is intended to be used with an object with a parkCar tag in the inspector, 
-/// when a pedestrian is in range it will cause a parkCar to become a Car and activate CharacterNavigationController.
+/// when a pedestrian is in range it will cause a parkCar to become a Car and activate CharacterNavigationController. 
+/// Made by Team Matrix
 /// </summary>
 public class DriverDetection : MonoBehaviour
 {

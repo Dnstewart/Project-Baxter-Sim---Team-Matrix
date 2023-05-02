@@ -2,25 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawner is a class that attaches to an object and spawns an child object designated in the inspector.
+/// Made by Team Matrix
+/// </summary>
 public class Spawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject ethanPrefab;
+    private GameObject objPrefab;
 
-    public GameObject resourceManager;
-
-    [SerializeField]
-    public GameObject theBossPrefab;
+    public GameObject resourceManager; /*!< This variable holds an instance of a resource manager object for updating the UI. */
 
     [SerializeField]
-    private float ethanInterval = 1f;
-    // Start is called before the first frame update
+    private float spwnTime = 1f;
     private int count = 0;
+
+    /// <summary>
+    /// Start() is called before the first frame, Start() starts a spawning coroutine to spawn the prefab object every interval.
+    /// </summary>
     void Start()
     {
-        StartCoroutine(SpawnEthan(ethanInterval, ethanPrefab));
-        //StartCoroutine(SpawnEthan(ethanInterval, theBossPrefab));
-        
+        StartCoroutine(SpawnEthan(spwnTime, objPrefab));
     }
     private IEnumerator SpawnEthan(float interval, GameObject person)
     {

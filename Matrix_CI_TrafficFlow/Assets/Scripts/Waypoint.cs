@@ -5,7 +5,8 @@ using UnityEngine;
 /// <summary>
 /// Waypoint class, 
 /// This class is used to make a linked list of waypoints. 
-/// There is a branch list to branch to a different waypoint in stead of the next waypoint.
+/// There is a branch list to branch to a different waypoint in stead of the next waypoint. 
+/// Made by Team Matrix
 /// </summary>
 public class Waypoint : MonoBehaviour
 {

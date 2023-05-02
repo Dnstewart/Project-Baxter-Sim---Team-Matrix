@@ -1,35 +1,19 @@
-//Character Navigation Controller
-/** 
- * This class makes models move to a specific location and is used as a component for objects.
- * Paired with the Waypoint Nav class it Changes locations.
- * Made by Team Matrix
- */
-
-// IMPORTS
-/** 
- * Main unity engine import. 
- */
 using UnityEngine;
 
+/// <summary>
+///  This class makes models move to a specific location and is used as a component for objects.
+///  Paired with the Waypoint Nav class it Changes locations.
+///  Made by Team Matrix
+/// </summary>
 public class CharacterNavigationController : MonoBehaviour
 {
-    // VARIABLES
-
-    /**
-     * The flag for if a destination was reached.
-     */
-    public bool reachedDestination = false;
-
+    // GLOBAL VARIABLES
+    public bool reachedDestination = false; /*!< The flag for if a destination was reached. */
     /**
      * The Current location of an object.
      */
     private Vector3 loc;
-
-    /**
-     * The movment speed of an object
-     */
-    public float moveSpeed = 5.0f;
-
+    public float moveSpeed = 5.0f; /*!< The movment speed of an object */
     /** 
      * The waypoint nav component reference.
      */
@@ -39,75 +23,39 @@ public class CharacterNavigationController : MonoBehaviour
      * The current destination.
      */
     private Vector3 destination;
-
-    /** 
-     * The stop distance from the destination.
-     */
-    public float stopDistance = .1f;
-
-    /**
-     * The object rotation speed.
-     */
-    public float rotationSpeed = 300f;
-
-    /**
-     * The flag for determining a pedestrian
-     */
-    public bool isPed = false;
-
-    /**
-     * The flag for determining a emergency service vehicle.
-     */
-    public bool isEmg = false;
-
+    public float stopDistance = .1f; /*!< The stop distance from the destination. */
+    public float rotationSpeed = 300f; /*!< The object rotation speed. */
+    public bool isPed = false; /*!< The flag for determining a pedestrian */
+    public bool isEmg = false; /*!< The flag for determining a emergency service vehicle. */
     /** 
      * The range for detecting cars or peds.
      */
     [SerializeField]
     private float range = 3f;
-
     /**
      * The range for detecting emergency services.
      */
     [SerializeField]
     private float rangeEmg = 5f;
-
     /**
      * The time spent stopped
      */
     [SerializeField]
     private float stopTime = 0;
-
     /**
-     * Testing variable
+     * Testing variables
      */
-    public Vector3 tempV3Ped;
-    /**
-    * Testing variables
-    */
-    public int countPed = 0;
-    /**
-    * Testing variables
-    */
-    public bool keepGoingTestPed = false;
-    /**
-    * Testing variables
-    */
-    public Vector3 tempV3Emg;
-    /**
-    * Testing variables
-    */
-    public int countEmg = 0;
-    /**
-    * Testing variables
-    */
-    public bool keepGoingTestEmg = false;
+    private Vector3 tempV3Ped;
+    private int countPed = 0;
+    private bool keepGoingTestPed = false;
+    private Vector3 tempV3Emg;
+    private int countEmg = 0;
+    private bool keepGoingTestEmg = false;
 
     // AWAKE
-    /**
-     * Upon object creation or simulation start the object 
-     * will get inital information about location and waypoint navigation. 
-     */
+    /// <summary>
+    /// Upon object creation or simulation start the object will get inital information about location and waypoint navigation.
+    /// </summary>
     public void Awake()
     {
         waypointCon = GetComponent<WaypointNav>();
@@ -130,10 +78,11 @@ public class CharacterNavigationController : MonoBehaviour
     }
 
     //UPDATE
-    /**
-     * This method is called once every frame.
-     * It does different actions based on the car and ped flags that are active.
-     */
+    /// <summary>
+    /// Every frame Update() does different actions based on the car and ped flags that are active. 
+    /// It will make the object this class is attached to move, and change its rotation.
+    /// It will call private functions based on the flags that are set in the inspector.
+    /// </summary>
     public void Update()
     {
         /**
@@ -175,11 +124,10 @@ public class CharacterNavigationController : MonoBehaviour
     }
 
     // SET DESTINATION
-    /**
-    * A Method to set a new destination.
-    * 
-    * PARAM: Vector3 destination (The next destination to be set)
-    */
+    /// <summary>
+    /// A Method to set a new destination.
+    /// </summary>
+    /// <param name="destination">A vector3 containing the next destination for the object to go to.</param>
     public void SetDestination(Vector3 destination)
     {
         this.destination = destination;
@@ -187,10 +135,9 @@ public class CharacterNavigationController : MonoBehaviour
     }
 
     // CARUPDATE
-    /**
-     * This method will stop a car when it detects pedestrians, 
-     * emergency services, or other cars.
-     */
+    /// <summary>
+    /// This method will stop a car when it detects pedestrians, emergency services, or other cars.
+    /// </summary>
     private void carUpdate()
     {
         /**
@@ -312,9 +259,9 @@ public class CharacterNavigationController : MonoBehaviour
     }
 
     // PEDESTRIAN UPDATE
-    /**
-    * This method will stop a ped when it detects emergency services.
-    */
+    /// <summary>
+    /// This method will stop a ped when it detects emergency services.
+    /// </summary>
     private void pedestrianUpdate()
     {
         /**
