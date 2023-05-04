@@ -9,19 +9,19 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject objPrefab;
+    private GameObject objPrefab; /*!< A variable that holds a prefab to be spawned. */
 
-    public GameObject resourceManager; /*!< This variable holds an instance of a resource manager object for updating the UI. */
+    public ResourceManager manager; /*!< a variable that holds an instance of our resource manager. */
 
     [SerializeField]
     private float spwnTime = 1f;
-    private int count = 0;
 
     /// <summary>
     /// Start() is called before the first frame, Start() starts a spawning coroutine to spawn the prefab object every interval.
     /// </summary>
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<ResourceManager>();
         StartCoroutine(SpawnEthan(spwnTime, objPrefab));
     }
     private IEnumerator SpawnEthan(float interval, GameObject person)
@@ -29,11 +29,10 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(interval);
         GameObject newEthan = Instantiate(person, gameObject.transform.position, gameObject.transform.rotation);
 
-        count++;
-        if (count != 250)
+        if (manager.pedCount < manager.pedLimit)
         {
             StartCoroutine(SpawnEthan(interval, person));
-            resourceManager.GetComponent<ResourceManager>().pedCount++;
+            manager.pedCount++;
 
         }
     }

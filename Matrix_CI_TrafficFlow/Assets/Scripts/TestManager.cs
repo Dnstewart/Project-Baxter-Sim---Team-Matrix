@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Was used to test unity's testrunner.
+/// </summary>
 public class TestManager : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject thing;
+    private GameObject thing; /*!< A gameobject that is spawned from the coroutine.  */
     [SerializeField]
-    public float time = 5f;
+    public float time = 5f; /*!< the time inbetween spawns. */
 
     private int count = 0;
-    void Start()
+    /// <summary>
+    /// Start() starts a coroutine that spawns objects , this tests the spawnCar method.
+    /// </summary>
+    public void Start()
     {
         thing = GameObject.CreatePrimitive(PrimitiveType.Cube);
         StartCoroutine(SpawnCar(time, thing));
@@ -24,6 +30,10 @@ public class TestManager : MonoBehaviour
         StartCoroutine(SpawnCar(interval, thing));
     }
 
+    /// <summary>
+    /// Gets the private variable called count.
+    /// </summary>
+    /// <returns>Returns an int variable with the contents of the variable count.</returns>
     public int getCount()
     {
         return count;

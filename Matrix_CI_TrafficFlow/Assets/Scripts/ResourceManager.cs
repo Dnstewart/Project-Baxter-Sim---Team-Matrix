@@ -17,6 +17,7 @@ public class ResourceManager : MonoBehaviour
     public static float minutes; /*!< Stores the Minutes */
     public int carCount; /*!< Stores the car count */
     public int pedCount; /*!< Stores the pedestrian count */
+    public int pedLimit = 250;
 
     public static bool readyUp = false; /*!< acts as a flag for pausing and unpausing. */
 

@@ -85,16 +85,18 @@ public class WaypointNav : MonoBehaviour
     private void findPedestrianExits()
     {
         GameObject[] pedestrianParking = GameObject.FindGameObjectsWithTag("parkPed");
+        GameObject[] mapExits = GameObject.FindGameObjectsWithTag("exitPed");
 
         float shortestDistance = Mathf.Infinity;
+        float exitDistance = 0;
         GameObject nearestExit = null;
 
         foreach (GameObject parking in pedestrianParking)
         {
-            float exitDistance = Vector3.Distance(transform.position, parking.transform.position);
-            //ParkingLot currentLot = parking.GetComponent<ParkingLot>();
+            exitDistance = Vector3.Distance(transform.position, parking.transform.position);
+            ParkingLot currentLot = parking.GetComponent<ParkingLot>();
 
-            if (exitDistance < shortestDistance /*&& currentLot.availability*/)
+            if (exitDistance < shortestDistance && currentLot.availability)
             {
                 shortestDistance = exitDistance;
                 nearestExit = parking;
@@ -103,10 +105,26 @@ public class WaypointNav : MonoBehaviour
 
         if (nearestExit != null)
         {
-            //this.lotTarget = nearestExit.GetComponent<ParkingLot>();
-            //this.lotTarget.assignedMembers++;
+            this.lotTarget = nearestExit.GetComponent<ParkingLot>();
+            this.lotTarget.assignedMembers++;
             this.targetExit = nearestExit;
         }
+        else
+        {
+            foreach (GameObject exits in mapExits)
+            {
+                exitDistance = Vector3.Distance(transform.position, exits.transform.position);
+
+                if (exitDistance < shortestDistance)
+                {
+                    shortestDistance = exitDistance;
+                    nearestExit = exits;
+                }
+            }
+
+        }
+
+        this.targetExit = nearestExit;
     }
 
     /// <summary>
