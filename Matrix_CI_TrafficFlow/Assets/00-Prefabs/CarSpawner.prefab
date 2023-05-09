@@ -44,5 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c375ff2bd3f4824a8e4c8ac76941ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 5351887187423226570, guid: ad26d454820be0144937d983482154b2, type: 3}
+  cars:
+  - {fileID: 5351887187423226570, guid: ad26d454820be0144937d983482154b2, type: 3}
+  - {fileID: 6392475684630174814, guid: 12606b856c6b688488061f8dc96487b8, type: 3}
+  - {fileID: 2156168754489563524, guid: 715fd36df50691d4f84d38898d2521b5, type: 3}
+  - {fileID: 5223248794517443270, guid: e2ff2ff9066e44c4687d724a5a53011b, type: 3}
+  - {fileID: 3730487128286967141, guid: ced503570a3f24e44a5d1fc8fe3ff16c, type: 3}
+  - {fileID: 5478572725086102875, guid: ae3df9bfc37c7674f81005137546e232, type: 3}
   time: 5
+  countdown: 3
+  isAmbient: 0
+  manager: {fileID: 0}
+  assignedLot: {fileID: 0}

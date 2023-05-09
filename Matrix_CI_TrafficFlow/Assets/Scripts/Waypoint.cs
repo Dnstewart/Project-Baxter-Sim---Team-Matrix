@@ -13,6 +13,8 @@ public class Waypoint : MonoBehaviour
     public Waypoint previousWaypoint; /*!< The waypoint that came before the current waypoint, may be null. */
     public Waypoint nextWaypoint; /*!< The waypoint that follows the current waypoint, may be null. */
 
+    public GameObject currentObject = null;
+
     public List<Waypoint> branches; /*!< A list of branch waypoints, may be an empty list. */
 
     [Range(0f, 1f)]

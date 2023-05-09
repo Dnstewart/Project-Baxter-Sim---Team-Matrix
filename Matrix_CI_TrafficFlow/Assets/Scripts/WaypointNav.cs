@@ -199,6 +199,11 @@ public class WaypointNav : MonoBehaviour
                 if(gameObject.tag == "closePed")
                 {
                     manager.pedCount--;
+
+                    if (this.lotTarget != null)
+                    {
+                        this.lotTarget.outgoingMembers++;
+                    }
                 }
                 else if (gameObject.tag == "Car")
                 {

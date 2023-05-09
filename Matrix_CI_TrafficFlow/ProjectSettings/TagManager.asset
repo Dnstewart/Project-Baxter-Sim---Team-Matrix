@@ -16,6 +16,7 @@ TagManager:
   - parkPed
   - parkCar
   - closePed
+  - pedEntry
   layers:
   - Default
   - TransparentFX

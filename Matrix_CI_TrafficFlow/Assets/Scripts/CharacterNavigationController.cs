@@ -9,39 +9,20 @@ public class CharacterNavigationController : MonoBehaviour
 {
     // GLOBAL VARIABLES
     public bool reachedDestination = false; /*!< The flag for if a destination was reached. */
-    /**
-     * The Current location of an object.
-     */
-    private Vector3 loc;
+    private Vector3 loc; /*!< The Current location of an object. */
     public float moveSpeed = 5.0f; /*!< The movment speed of an object */
-    /** 
-     * The waypoint nav component reference.
-     */
-    private WaypointNav waypointCon;
-
-    /**
-     * The current destination.
-     */
-    private Vector3 destination;
+    private WaypointNav waypointCon; /*!< The waypoint nav component reference. */
+    private Vector3 destination; /*!< The current destination. */
     public float stopDistance = .1f; /*!< The stop distance from the destination. */
     public float rotationSpeed = 300f; /*!< The object rotation speed. */
     public bool isPed = false; /*!< The flag for determining a pedestrian */
     public bool isEmg = false; /*!< The flag for determining a emergency service vehicle. */
-    /** 
-     * The range for detecting cars or peds.
-     */
     [SerializeField]
-    private float range = 3f;
-    /**
-     * The range for detecting emergency services.
-     */
+    private float range = 3f; /*!< The range for detecting cars or peds. */
     [SerializeField]
-    private float rangeEmg = 5f;
-    /**
-     * The time spent stopped
-     */
+    private float rangeEmg = 5f; /*!< The range for detecting emergency services. */
     [SerializeField]
-    private float stopTime = 0;
+    private float stopTime = 0; /*!< The time spent stopped */
     /**
      * Testing variables
      */
