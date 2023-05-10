@@ -20,6 +20,7 @@ public class ResourceManager : MonoBehaviour
     public int pedLimit = 250;
 
     public static bool readyUp = false; /*!< acts as a flag for pausing and unpausing. */
+    public static bool initialAdjust = false;
 
     /// <summary>
     /// Start() is called before the first frame, Start() initalizes the global variables, calls ShowResources(), and PauseSim().
@@ -27,7 +28,7 @@ public class ResourceManager : MonoBehaviour
     public void Start()
     {
         seconds = 0f;
-        minutes = 0;
+        minutes = 0f;
         readyUp = false;
         PauseSim();
         ShowResources();
@@ -54,14 +55,33 @@ public class ResourceManager : MonoBehaviour
             
         }
 
-        seconds += Time.deltaTime;
-        if (Math.Ceiling(seconds) % 61 == 0)
-        {
-            minutes++;
-            seconds = 0f;
-        }
-
+        IncrementTime();
         ShowResources();
+    }
+
+    public void IncrementTime()
+    {
+        if (readyUp)
+        {
+            if (!initialAdjust)
+            {
+                minutes--;
+                initialAdjust = true;
+            }
+
+            seconds += Time.deltaTime;
+            if (Math.Ceiling(seconds) % 61 == 0)
+            {
+                minutes++;
+                seconds = 0f;
+            }
+        }
+    }
+
+    public void resetAdjust()
+    {
+        readyUp = false;
+        initialAdjust = false;
     }
 
     /// <summary>
