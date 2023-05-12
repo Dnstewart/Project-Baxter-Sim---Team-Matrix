@@ -10,10 +10,12 @@ public class EventManager : MonoBehaviour
 {
     public int weatherType = 0; /*!< Variable representing the current weather type in the simulation. 0 = Clear; 1 = Raining; 2 = Snowing. */
     public int timeValue = 0; /*!< Variable representing the current time of day in the simulation. 0 = Day; 1 = Night. */
+    public float countdown = 10f;
 
     public GameObject daylight; /*!< The light object in the scene */
     public GameObject rain; /*!< The rain objects that fall. */
     public GameObject snow; /*!< The snow objects that fall.  */
+    public ResourceManager manager;
 
     /// <summary>
     /// This method calls the HandleWeather() and HandleTime() during the first frame.
@@ -22,6 +24,22 @@ public class EventManager : MonoBehaviour
     {
         HandleWeather();
         HandleTime();
+
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<ResourceManager>();
+    }
+
+    void update()
+    {
+        if (manager.carCount <= 0 && manager.pedCount <= 0 && countdown <= 0)
+        {
+            manager.PauseSim();
+        }
+        else if (manager.carCount > 0 || manager.pedCount > 0)
+        {
+            countdown = 10f;
+        }
+        
+        countdown -= Time.deltaTime;
     }
 
     /// <summary>
@@ -60,4 +78,5 @@ public class EventManager : MonoBehaviour
             daylight.SetActive(false);
         }
     }
+
 }

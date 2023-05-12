@@ -19,6 +19,7 @@ public class WaypointNav : MonoBehaviour
 
     private ResourceManager manager;
     private bool pedCloseFlag = false;
+    public bool isAmbient = false;
 
     /// <summary>
     /// When the simulation is started Awake() is called
@@ -52,7 +53,9 @@ public class WaypointNav : MonoBehaviour
         }
    
         controller.SetDestination(currentWaypoint.GetPosition());
-        gameObject.transform.LookAt(currentWaypoint.GetPosition());
+        Vector3 direction = (currentWaypoint.GetPosition() - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
 
         manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<ResourceManager>();
     }
@@ -196,7 +199,7 @@ public class WaypointNav : MonoBehaviour
             
             if (currentWaypoint == null)
             {
-                if(gameObject.tag == "closePed")
+                if(gameObject.tag == "closePed" && !isAmbient)
                 {
                     manager.pedCount--;
 
@@ -205,7 +208,7 @@ public class WaypointNav : MonoBehaviour
                         this.lotTarget.outgoingMembers++;
                     }
                 }
-                else if (gameObject.tag == "Car")
+                else if (gameObject.tag == "Car" && !isAmbient)
                 {
                     manager.carCount--;
                 }
@@ -222,6 +225,9 @@ public class WaypointNav : MonoBehaviour
                 if(currentWaypoint != null)
                 {
                     controller.SetDestination(currentWaypoint.GetPosition());
+                    Vector3 direction = (currentWaypoint.GetPosition() - transform.position).normalized;
+                    Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
+                    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
                 }
             }
         }

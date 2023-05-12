@@ -73,7 +73,7 @@ public class CarController : MonoBehaviour
             }
         }
 
-        if (nearestPed != null && shortestDistance <= range)
+        /*if (nearestPed != null && shortestDistance <= range)
         {
             this.stopTime = .1f;
 
@@ -86,7 +86,7 @@ public class CarController : MonoBehaviour
         else
         {
             this.speed = 20;
-        }
+        }*/
     }
 
     /// <summary>

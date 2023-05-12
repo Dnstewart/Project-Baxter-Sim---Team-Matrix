@@ -42,8 +42,11 @@ public class CarSpawn : MonoBehaviour
             }
             else
             {
-                StartCoroutine(SpawnCar(time, cars));
-                countdown = 3f;
+                if (manager.carCountA < manager.ambientLimit)
+                {
+                    StartCoroutine(SpawnCar(time, cars));
+                    countdown = 3f;
+                }
             }
         }
 
@@ -60,6 +63,10 @@ public class CarSpawn : MonoBehaviour
         if (!isAmbient)
         {
             manager.carCount++; 
+        }
+        else
+        {
+            manager.carCountA++;
         }
           
     }

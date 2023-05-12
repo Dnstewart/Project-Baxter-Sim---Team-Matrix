@@ -29,10 +29,11 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(interval);
         GameObject newEthan = Instantiate(person, gameObject.transform.position, gameObject.transform.rotation);
 
-        if (manager.pedCount < manager.pedLimit)
+        if (manager.pedsSpawned < manager.pedLimit)
         {
             StartCoroutine(SpawnEthan(interval, person));
             manager.pedCount++;
+            manager.pedsSpawned++;
 
         }
     }

@@ -17,7 +17,10 @@ public class ResourceManager : MonoBehaviour
     public static float minutes; /*!< Stores the Minutes */
     public int carCount; /*!< Stores the car count */
     public int pedCount; /*!< Stores the pedestrian count */
+    public int pedsSpawned = 0;
+    public int carCountA;
     public int pedLimit = 250;
+    public int ambientLimit = 25;
 
     public static bool readyUp = false; /*!< acts as a flag for pausing and unpausing. */
     public static bool initialAdjust = false;
@@ -53,6 +56,11 @@ public class ResourceManager : MonoBehaviour
                 readyUp = false;
             }
             
+        }
+
+        if (pedCount < 0)
+        {
+            pedCount = pedCount * -1;
         }
 
         IncrementTime();
@@ -108,5 +116,15 @@ public class ResourceManager : MonoBehaviour
         timeText.text = "Time: " + minutes.ToString("00") + ":" + seconds.ToString("00");
         carCountText.text = "Cars: " + carCount;
         pedCountText.text = "Pedestrians: " + pedCount;
+    }
+
+    public void AdjustPedLimit(float newLimit)
+    {
+        pedLimit = (int) newLimit;
+    }
+
+    public void AdjustAmbientLimit(float newLimit)
+    {
+        ambientLimit = (int) newLimit;
     }
 }
