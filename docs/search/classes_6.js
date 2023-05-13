@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['waypoint_0',['Waypoint',['../class_waypoint.html',1,'']]],
-  ['waypointnav_1',['WaypointNav',['../class_waypoint_nav.html',1,'']]]
+  ['spawner_0',['Spawner',['../class_spawner.html',1,'']]]
 ];

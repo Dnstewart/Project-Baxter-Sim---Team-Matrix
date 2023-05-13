@@ -1,4 +1,6 @@
 <map id="CarSpawn" name="CarSpawn">
-<area shape="rect" id="node1" title=" " alt="" coords="20,79,101,104"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,31"/>
+<area shape="rect" id="node1" title="This class is used for spawning cars from parking lots or onto streets. This separate from the other ..." alt="" coords="44,168,125,193"/>
+<area shape="rect" id="node2" title=" " alt="" coords="29,5,140,31"/>
+<area shape="rect" id="node3" href="$class_resource_manager.html" title="ResourceManager is a class that is attached to a GameObject to control and keep track of different si..." alt="" coords="21,80,148,105"/>
+<area shape="rect" id="node4" href="$class_parking_lot.html" title="This class is used to operate the parking lot cars, when pedestrians get to a parking lot they are de..." alt="" coords="172,80,256,105"/>
 </map>

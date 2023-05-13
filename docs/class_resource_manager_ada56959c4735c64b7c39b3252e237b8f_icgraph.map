@@ -1,0 +1,4 @@
+<map id="ResourceManager.ResumeSim" name="ResourceManager.ResumeSim">
+<area shape="rect" id="node1" title="Sets the global time scale to 1 to resume the simulation." alt="" coords="225,5,428,31"/>
+<area shape="rect" id="node2" href="$class_resource_manager.html#a73f9b9612d9ba254aca125f695201381" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on..." alt="" coords="5,5,177,31"/>
+</map>

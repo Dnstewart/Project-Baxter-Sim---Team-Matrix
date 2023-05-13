@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['testmanager_2ecs_0',['TestManager.cs',['../_test_manager_8cs.html',1,'']]]
+  ['resourcemanager_2ecs_0',['ResourceManager.cs',['../_resource_manager_8cs.html',1,'']]],
+  ['rotation_2ecs_1',['Rotation.cs',['../_rotation_8cs.html',1,'']]]
 ];

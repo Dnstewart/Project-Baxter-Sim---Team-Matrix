@@ -1,0 +1,5 @@
+<map id="ResourceManager.PauseSim" name="ResourceManager.PauseSim">
+<area shape="rect" id="node1" title="Sets the global time scale to 0 to pause the simulation." alt="" coords="225,31,416,56"/>
+<area shape="rect" id="node2" href="$class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5" title="Start() is called before the first frame, Start() initalizes the global variables,..." alt="" coords="12,5,171,31"/>
+<area shape="rect" id="node3" href="$class_resource_manager.html#a73f9b9612d9ba254aca125f695201381" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on..." alt="" coords="5,55,177,80"/>
+</map>

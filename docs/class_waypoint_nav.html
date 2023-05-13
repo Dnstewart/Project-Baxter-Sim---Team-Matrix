@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Inital Matrix docs: WaypointNav Class Reference</title>
+<title>CI Baxter Traffic Sim: WaypointNav Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Inital Matrix docs
+   <div id="projectname">CI Baxter Traffic Sim
    </div>
-   <div id="projectbrief">Baxter Sim</div>
   </td>
  </tr>
  </tbody>
@@ -96,12 +95,15 @@ $(document).ready(function(){initNavTree('class_waypoint_nav.html',''); initResi
   <div class="headertitle"><div class="title">WaypointNav Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_waypoint_nav.html" title="WaypointNav is used to navigate a Waypoint network. For the purpose of the Baxter simulation,...">WaypointNav</a> is used to navigate a <a class="el" href="class_waypoint.html" title="Waypoint class, This class is used to make a linked list of waypoints. There is a branch list to bran...">Waypoint</a> network. For the purpose of the Baxter simulation, it is used in conjunction with <a class="el" href="class_character_navigation_controller.html" title="This class makes models move to a specific location and is used as a component for objects....">CharacterNavigationController</a>. When an object with this script attached makes it to the target <a class="el" href="class_waypoint.html" title="Waypoint class, This class is used to make a linked list of waypoints. There is a branch list to bran...">Waypoint</a> in a network, <a class="el" href="class_waypoint_nav.html" title="WaypointNav is used to navigate a Waypoint network. For the purpose of the Baxter simulation,...">WaypointNav</a> will choose the next location. Made by Team Matrix.  
+ <a href="class_waypoint_nav.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for WaypointNav:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_waypoint_nav__inherit__graph.png" border="0" usemap="#a_waypoint_nav_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_waypoint_nav_inherit__map" id="a_waypoint_nav_inherit__map">
-<area shape="rect" title=" " alt="" coords="11,79,110,104"/>
+<area shape="rect" title="WaypointNav is used to navigate a Waypoint network. For the purpose of the Baxter simulation,..." alt="" coords="11,79,110,104"/>
 <area shape="rect" title=" " alt="" coords="5,5,116,31"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -110,9 +112,10 @@ Collaboration diagram for WaypointNav:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_waypoint_nav__coll__graph.png" border="0" usemap="#a_waypoint_nav_coll__map" alt="Collaboration graph"/></div>
 <map name="a_waypoint_nav_coll__map" id="a_waypoint_nav_coll__map">
-<area shape="rect" title=" " alt="" coords="17,172,115,197"/>
+<area shape="rect" title="WaypointNav is used to navigate a Waypoint network. For the purpose of the Baxter simulation,..." alt="" coords="11,172,110,197"/>
 <area shape="rect" title=" " alt="" coords="5,5,116,31"/>
-<area shape="rect" href="class_waypoint.html" title=" " alt="" coords="82,82,159,107"/>
+<area shape="rect" href="class_waypoint.html" title="Waypoint class, This class is used to make a linked list of waypoints. There is a branch list to bran..." alt="" coords="22,82,99,107"/>
+<area shape="rect" href="class_parking_lot.html" title="This class is used to operate the parking lot cars, when pedestrians get to a parking lot they are de..." alt="" coords="251,82,335,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -122,8 +125,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a392e1e94fe5f2c6a3d0505d9529754b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce483dce81add67b5fc3db7d20d70ad"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_nav.html#acce483dce81add67b5fc3db7d20d70ad">targetExit</a></td></tr>
 <tr class="separator:acce483dce81add67b5fc3db7d20d70ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59cb4efee5e335786987077f1e8422d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_parking_lot.html">ParkingLot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_nav.html#ab59cb4efee5e335786987077f1e8422d">lotTarget</a></td></tr>
+<tr class="separator:ab59cb4efee5e335786987077f1e8422d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6c4291e50e64fd50dd5142c40e90cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_nav.html#a2b6c4291e50e64fd50dd5142c40e90cb">isAmbient</a> = false</td></tr>
+<tr class="separator:a2b6c4291e50e64fd50dd5142c40e90cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_waypoint_nav.html" title="WaypointNav is used to navigate a Waypoint network. For the purpose of the Baxter simulation,...">WaypointNav</a> is used to navigate a <a class="el" href="class_waypoint.html" title="Waypoint class, This class is used to make a linked list of waypoints. There is a branch list to bran...">Waypoint</a> network. For the purpose of the Baxter simulation, it is used in conjunction with <a class="el" href="class_character_navigation_controller.html" title="This class makes models move to a specific location and is used as a component for objects....">CharacterNavigationController</a>. When an object with this script attached makes it to the target <a class="el" href="class_waypoint.html" title="Waypoint class, This class is used to make a linked list of waypoints. There is a branch list to bran...">Waypoint</a> in a network, <a class="el" href="class_waypoint_nav.html" title="WaypointNav is used to navigate a Waypoint network. For the purpose of the Baxter simulation,...">WaypointNav</a> will choose the next location. Made by Team Matrix. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a392e1e94fe5f2c6a3d0505d9529754b0" name="a392e1e94fe5f2c6a3d0505d9529754b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a392e1e94fe5f2c6a3d0505d9529754b0">&#9670;&#160;</a></span>currentWaypoint</h2>
 
@@ -135,8 +144,38 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The objects Current target waypoint. </p>
 
 <p class="reference">Referenced by <a class="el" href="class_character_navigation_controller.html#a0cb4b4712bc2eeb7f98a3f464342ec88">CharacterNavigationController.Awake()</a>.</p>
+
+</div>
+</div>
+<a id="a2b6c4291e50e64fd50dd5142c40e90cb" name="a2b6c4291e50e64fd50dd5142c40e90cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b6c4291e50e64fd50dd5142c40e90cb">&#9670;&#160;</a></span>isAmbient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WaypointNav.isAmbient = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab59cb4efee5e335786987077f1e8422d" name="ab59cb4efee5e335786987077f1e8422d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab59cb4efee5e335786987077f1e8422d">&#9670;&#160;</a></span>lotTarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_parking_lot.html">ParkingLot</a> WaypointNav.lotTarget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A parking lot destination. </p>
 
 </div>
 </div>
@@ -151,6 +190,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>An object that denotes a target exit. </p>
 
 </div>
 </div>

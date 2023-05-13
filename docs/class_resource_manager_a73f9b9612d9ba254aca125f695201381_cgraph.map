@@ -1,0 +1,7 @@
+<map id="ResourceManager.Update" name="ResourceManager.Update">
+<area shape="rect" id="node1" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on..." alt="" coords="5,80,177,105"/>
+<area shape="rect" id="node2" href="$class_resource_manager.html#a19fc088dca99ad2256efd203da7ae454" title=" " alt="" coords="230,5,446,31"/>
+<area shape="rect" id="node3" href="$class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b" title="Sets the global time scale to 0 to pause the simulation." alt="" coords="243,55,433,80"/>
+<area shape="rect" id="node4" href="$class_resource_manager.html#ada56959c4735c64b7c39b3252e237b8f" title="Sets the global time scale to 1 to resume the simulation." alt="" coords="237,104,439,129"/>
+<area shape="rect" id="node5" href="$class_resource_manager.html#a428f982a45d39da32f834726b4ed6857" title="Updates the UI text." alt="" coords="225,153,451,179"/>
+</map>

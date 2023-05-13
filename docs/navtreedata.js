@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Inital Matrix docs", "index.html", [
+  [ "CI Baxter Traffic Sim", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

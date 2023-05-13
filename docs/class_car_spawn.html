@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Inital Matrix docs: CarSpawn Class Reference</title>
+<title>CI Baxter Traffic Sim: CarSpawn Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Inital Matrix docs
+   <div id="projectname">CI Baxter Traffic Sim
    </div>
-   <div id="projectbrief">Baxter Sim</div>
   </td>
  </tr>
  </tbody>
@@ -91,16 +90,21 @@ $(document).ready(function(){initNavTree('class_car_spawn.html',''); initResizab
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_car_spawn-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CarSpawn Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class is used for spawning cars from parking lots or onto streets. This separate from the other spawner class. Made by Team Matrix.  
+ <a href="class_car_spawn.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CarSpawn:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_car_spawn__inherit__graph.png" border="0" usemap="#a_car_spawn_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_car_spawn_inherit__map" id="a_car_spawn_inherit__map">
-<area shape="rect" title=" " alt="" coords="20,79,101,104"/>
+<area shape="rect" title="This class is used for spawning cars from parking lots or onto streets. This separate from the other ..." alt="" coords="20,79,101,104"/>
 <area shape="rect" title=" " alt="" coords="5,5,116,31"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -109,12 +113,183 @@ Collaboration diagram for CarSpawn:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_car_spawn__coll__graph.png" border="0" usemap="#a_car_spawn_coll__map" alt="Collaboration graph"/></div>
 <map name="a_car_spawn_coll__map" id="a_car_spawn_coll__map">
-<area shape="rect" title=" " alt="" coords="20,79,101,104"/>
-<area shape="rect" title=" " alt="" coords="5,5,116,31"/>
+<area shape="rect" title="This class is used for spawning cars from parking lots or onto streets. This separate from the other ..." alt="" coords="44,168,125,193"/>
+<area shape="rect" title=" " alt="" coords="29,5,140,31"/>
+<area shape="rect" href="class_resource_manager.html" title="ResourceManager is a class that is attached to a GameObject to control and keep track of different si..." alt="" coords="21,80,148,105"/>
+<area shape="rect" href="class_parking_lot.html" title="This class is used to operate the parking lot cars, when pedestrians get to a parking lot they are de..." alt="" coords="172,80,256,105"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a60ef8cee687eeb0f9a9ceb152e8df4f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car_spawn.html#a60ef8cee687eeb0f9a9ceb152e8df4f1">Start</a> ()</td></tr>
+<tr class="memdesc:a60ef8cee687eeb0f9a9ceb152e8df4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start is called before the first frame update, it finds the Resource manager object and puts it in the manager variable.  <br /></td></tr>
+<tr class="separator:a60ef8cee687eeb0f9a9ceb152e8df4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160762ced6510e5a8120c9318eca54c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car_spawn.html#a160762ced6510e5a8120c9318eca54c7">HandleOutgoing</a> ()</td></tr>
+<tr class="memdesc:a160762ced6510e5a8120c9318eca54c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if there are cars waiting to leave the parking lot and starts spawning if so.  <br /></td></tr>
+<tr class="separator:a160762ced6510e5a8120c9318eca54c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ac0aad709af079de7733b070b30971006"><td class="memItemLeft" align="right" valign="top">GameObject[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car_spawn.html#ac0aad709af079de7733b070b30971006">cars</a></td></tr>
+<tr class="separator:ac0aad709af079de7733b070b30971006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51245890e9bebd241cd8f8682bbbcb2c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car_spawn.html#a51245890e9bebd241cd8f8682bbbcb2c">time</a> = 1f</td></tr>
+<tr class="separator:a51245890e9bebd241cd8f8682bbbcb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219f8ab279496265e72c1e0e56b792e1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car_spawn.html#a219f8ab279496265e72c1e0e56b792e1">countdown</a> = 3f</td></tr>
+<tr class="separator:a219f8ab279496265e72c1e0e56b792e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad862f6b3ba0f8e420e18b31ce03c8bb6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car_spawn.html#ad862f6b3ba0f8e420e18b31ce03c8bb6">isAmbient</a> = false</td></tr>
+<tr class="separator:ad862f6b3ba0f8e420e18b31ce03c8bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f8cae0889c5afbe696a21293bd0242d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_resource_manager.html">ResourceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car_spawn.html#a0f8cae0889c5afbe696a21293bd0242d">manager</a></td></tr>
+<tr class="separator:a0f8cae0889c5afbe696a21293bd0242d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe02b949ece8de86ca27879c31acf775"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_parking_lot.html">ParkingLot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_car_spawn.html#abe02b949ece8de86ca27879c31acf775">assignedLot</a></td></tr>
+<tr class="separator:abe02b949ece8de86ca27879c31acf775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is used for spawning cars from parking lots or onto streets. This separate from the other spawner class. Made by Team Matrix. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a160762ced6510e5a8120c9318eca54c7" name="a160762ced6510e5a8120c9318eca54c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160762ced6510e5a8120c9318eca54c7">&#9670;&#160;</a></span>HandleOutgoing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CarSpawn.HandleOutgoing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>checks if there are cars waiting to leave the parking lot and starts spawning if so. </p>
+
+<p class="reference">References <a class="el" href="class_car_spawn.html#abe02b949ece8de86ca27879c31acf775">assignedLot</a>, <a class="el" href="class_car_spawn.html#ac0aad709af079de7733b070b30971006">cars</a>, <a class="el" href="class_parking_lot.html#a6a0375e5ef18a004406396fe13e92163">ParkingLot.outgoingMembers</a>, and <a class="el" href="class_car_spawn.html#a51245890e9bebd241cd8f8682bbbcb2c">time</a>.</p>
+
+</div>
+</div>
+<a id="a60ef8cee687eeb0f9a9ceb152e8df4f1" name="a60ef8cee687eeb0f9a9ceb152e8df4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ef8cee687eeb0f9a9ceb152e8df4f1">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CarSpawn.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start is called before the first frame update, it finds the Resource manager object and puts it in the manager variable. </p>
+
+<p class="reference">References <a class="el" href="class_car_spawn.html#a0f8cae0889c5afbe696a21293bd0242d">manager</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="abe02b949ece8de86ca27879c31acf775" name="abe02b949ece8de86ca27879c31acf775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe02b949ece8de86ca27879c31acf775">&#9670;&#160;</a></span>assignedLot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_parking_lot.html">ParkingLot</a> CarSpawn.assignedLot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>holds an instance of the associated parking lot. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_car_spawn.html#a160762ced6510e5a8120c9318eca54c7">HandleOutgoing()</a>.</p>
+
+</div>
+</div>
+<a id="ac0aad709af079de7733b070b30971006" name="ac0aad709af079de7733b070b30971006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0aad709af079de7733b070b30971006">&#9670;&#160;</a></span>cars</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject [] CarSpawn.cars</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A list of different cars that spawn form the parking lots. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_car_spawn.html#a160762ced6510e5a8120c9318eca54c7">HandleOutgoing()</a>.</p>
+
+</div>
+</div>
+<a id="a219f8ab279496265e72c1e0e56b792e1" name="a219f8ab279496265e72c1e0e56b792e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219f8ab279496265e72c1e0e56b792e1">&#9670;&#160;</a></span>countdown</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CarSpawn.countdown = 3f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The timer before the next car can spawn. </p>
+
+</div>
+</div>
+<a id="ad862f6b3ba0f8e420e18b31ce03c8bb6" name="ad862f6b3ba0f8e420e18b31ce03c8bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad862f6b3ba0f8e420e18b31ce03c8bb6">&#9670;&#160;</a></span>isAmbient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CarSpawn.isAmbient = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A flag that determines if a car spawner is used for a parking lot or a normal street spawner. </p>
+
+</div>
+</div>
+<a id="a0f8cae0889c5afbe696a21293bd0242d" name="a0f8cae0889c5afbe696a21293bd0242d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8cae0889c5afbe696a21293bd0242d">&#9670;&#160;</a></span>manager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_resource_manager.html">ResourceManager</a> CarSpawn.manager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>holds an instance of the resource manager. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_car_spawn.html#a60ef8cee687eeb0f9a9ceb152e8df4f1">Start()</a>.</p>
+
+</div>
+</div>
+<a id="a51245890e9bebd241cd8f8682bbbcb2c" name="a51245890e9bebd241cd8f8682bbbcb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51245890e9bebd241cd8f8682bbbcb2c">&#9670;&#160;</a></span>time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CarSpawn.time = 1f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The time between each car spawn. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_car_spawn.html#a160762ced6510e5a8120c9318eca54c7">HandleOutgoing()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Dylan Stewart/Documents/GitHub/Project-Baxter-Sim---Team-Matrix/Matrix_CI_TrafficFlow/Assets/Scripts/<a class="el" href="_car_spawn_8cs.html">CarSpawn.cs</a></li>
+<li>C:/Users/Dylan Stewart/Documents/GitHub/Project-Baxter-Sim---Team-Matrix/Matrix_CI_TrafficFlow/Assets/Scripts/AI/<a class="el" href="_car_spawn_8cs.html">CarSpawn.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

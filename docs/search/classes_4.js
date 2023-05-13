@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['spawner_0',['Spawner',['../class_spawner.html',1,'']]]
+  ['parkinglot_0',['ParkingLot',['../class_parking_lot.html',1,'']]],
+  ['playermanager_1',['PlayerManager',['../class_player_manager.html',1,'']]]
 ];

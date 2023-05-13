@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Inital Matrix docs: CharacterNavigationController Class Reference</title>
+<title>CI Baxter Traffic Sim: CharacterNavigationController Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Inital Matrix docs
+   <div id="projectname">CI Baxter Traffic Sim
    </div>
-   <div id="projectbrief">Baxter Sim</div>
   </td>
  </tr>
  </tbody>
@@ -97,12 +96,15 @@ $(document).ready(function(){initNavTree('class_character_navigation_controller.
   <div class="headertitle"><div class="title">CharacterNavigationController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class makes models move to a specific location and is used as a component for objects. Paired with the <a class="el" href="class_waypoint.html" title="Waypoint class, This class is used to make a linked list of waypoints. There is a branch list to bran...">Waypoint</a> Nav class it Changes locations. Made by Team Matrix.  
+ <a href="class_character_navigation_controller.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CharacterNavigationController:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_character_navigation_controller__inherit__graph.png" border="0" usemap="#a_character_navigation_controller_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_character_navigation_controller_inherit__map" id="a_character_navigation_controller_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,79,197,104"/>
+<area shape="rect" title="This class makes models move to a specific location and is used as a component for objects...." alt="" coords="5,79,197,104"/>
 <area shape="rect" title=" " alt="" coords="46,5,157,31"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -111,7 +113,7 @@ Collaboration diagram for CharacterNavigationController:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_character_navigation_controller__coll__graph.png" border="0" usemap="#a_character_navigation_controller_coll__map" alt="Collaboration graph"/></div>
 <map name="a_character_navigation_controller_coll__map" id="a_character_navigation_controller_coll__map">
-<area shape="rect" title=" " alt="" coords="5,79,197,104"/>
+<area shape="rect" title="This class makes models move to a specific location and is used as a component for objects...." alt="" coords="5,79,197,104"/>
 <area shape="rect" title=" " alt="" coords="46,5,157,31"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -119,10 +121,13 @@ Collaboration diagram for CharacterNavigationController:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0cb4b4712bc2eeb7f98a3f464342ec88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#a0cb4b4712bc2eeb7f98a3f464342ec88">Awake</a> ()</td></tr>
+<tr class="memdesc:a0cb4b4712bc2eeb7f98a3f464342ec88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upon object creation or simulation start the object will get inital information about location and waypoint navigation.  <br /></td></tr>
 <tr class="separator:a0cb4b4712bc2eeb7f98a3f464342ec88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac67172858d070f091f8b22e731b9a614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#ac67172858d070f091f8b22e731b9a614">Update</a> ()</td></tr>
+<tr class="memdesc:ac67172858d070f091f8b22e731b9a614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every frame <a class="el" href="class_character_navigation_controller.html#ac67172858d070f091f8b22e731b9a614" title="Every frame Update() does different actions based on the car and ped flags that are active....">Update()</a> does different actions based on the car and ped flags that are active. It will make the object this class is attached to move, and change its rotation. It will call private functions based on the flags that are set in the inspector.  <br /></td></tr>
 <tr class="separator:ac67172858d070f091f8b22e731b9a614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac66dae428be6c5a9c85456b4fa1f2013"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#ac66dae428be6c5a9c85456b4fa1f2013">SetDestination</a> (Vector3 destination)</td></tr>
+<tr class="memdesc:ac66dae428be6c5a9c85456b4fa1f2013"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Method to set a new destination.  <br /></td></tr>
 <tr class="separator:ac66dae428be6c5a9c85456b4fa1f2013"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -133,26 +138,16 @@ Public Attributes</h2></td></tr>
 <tr class="separator:af221b1c4850eef2a1a639cda403e8675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7c252550fab0ba6cbcac29fa422a5aa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#aa7c252550fab0ba6cbcac29fa422a5aa">stopDistance</a> = .1f</td></tr>
 <tr class="separator:aa7c252550fab0ba6cbcac29fa422a5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad68958fcc1bf05cd9e5899e642bfc464"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#ad68958fcc1bf05cd9e5899e642bfc464">rotationSpeed</a> = 0.5f</td></tr>
+<tr class="memitem:ad68958fcc1bf05cd9e5899e642bfc464"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#ad68958fcc1bf05cd9e5899e642bfc464">rotationSpeed</a> = 300f</td></tr>
 <tr class="separator:ad68958fcc1bf05cd9e5899e642bfc464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57f198b338ed8ff1e617eab67aa4d8a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#a57f198b338ed8ff1e617eab67aa4d8a6">isPed</a> = false</td></tr>
 <tr class="separator:a57f198b338ed8ff1e617eab67aa4d8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ff7483b09bfdecb71c6376fbe17ae3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#a8ff7483b09bfdecb71c6376fbe17ae3e">isEmg</a> = false</td></tr>
 <tr class="separator:a8ff7483b09bfdecb71c6376fbe17ae3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeef8cbc20a8f4327d334de0f673aba3"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#adeef8cbc20a8f4327d334de0f673aba3">tempV3Ped</a></td></tr>
-<tr class="separator:adeef8cbc20a8f4327d334de0f673aba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa120421c9d5e9b7440d3ace3599a822"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#afa120421c9d5e9b7440d3ace3599a822">countPed</a> = 0</td></tr>
-<tr class="separator:afa120421c9d5e9b7440d3ace3599a822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2205628d3b7d243a074312c673085efd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#a2205628d3b7d243a074312c673085efd">keepGoingTestPed</a> = false</td></tr>
-<tr class="separator:a2205628d3b7d243a074312c673085efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb3a1228f6ae5177d65d0c553bfe6aa6"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#acb3a1228f6ae5177d65d0c553bfe6aa6">tempV3Emg</a></td></tr>
-<tr class="separator:acb3a1228f6ae5177d65d0c553bfe6aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a373eeb59b279a081b8e1462186f04883"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#a373eeb59b279a081b8e1462186f04883">countEmg</a> = 0</td></tr>
-<tr class="separator:a373eeb59b279a081b8e1462186f04883"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ab951fea60d7f58915fee435ee9f77a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character_navigation_controller.html#a6ab951fea60d7f58915fee435ee9f77a">keepGoingTestEmg</a> = false</td></tr>
-<tr class="separator:a6ab951fea60d7f58915fee435ee9f77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class makes models move to a specific location and is used as a component for objects. Paired with the <a class="el" href="class_waypoint.html" title="Waypoint class, This class is used to make a linked list of waypoints. There is a branch list to bran...">Waypoint</a> Nav class it Changes locations. Made by Team Matrix. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0cb4b4712bc2eeb7f98a3f464342ec88" name="a0cb4b4712bc2eeb7f98a3f464342ec88"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0cb4b4712bc2eeb7f98a3f464342ec88">&#9670;&#160;</a></span>Awake()</h2>
 
@@ -167,6 +162,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Upon object creation or simulation start the object will get inital information about location and waypoint navigation. </p>
 
 <p class="reference">References <a class="el" href="class_waypoint_nav.html#a392e1e94fe5f2c6a3d0505d9529754b0">WaypointNav.currentWaypoint</a>.</p>
@@ -188,8 +184,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A Method to set a new destination.</p>
-<p>PARAM: Vector3 destination (The next destination to be set) </p>
+
+<p>A Method to set a new destination. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>A vector3 containing the next destination for the object to go to.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -207,7 +209,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method is called once every frame. It does different actions based on the car and ped flags that are active. </p>
+
+<p>Every frame <a class="el" href="class_character_navigation_controller.html#ac67172858d070f091f8b22e731b9a614" title="Every frame Update() does different actions based on the car and ped flags that are active....">Update()</a> does different actions based on the car and ped flags that are active. It will make the object this class is attached to move, and change its rotation. It will call private functions based on the flags that are set in the inspector. </p>
 <p>Get destination dstance and rotate model towards destination. Check if the destination was reached.</p>
 <p>check the isPed and isEmg flags to call correct subsequent method.</p>
 
@@ -216,34 +219,6 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a373eeb59b279a081b8e1462186f04883" name="a373eeb59b279a081b8e1462186f04883"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a373eeb59b279a081b8e1462186f04883">&#9670;&#160;</a></span>countEmg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int CharacterNavigationController.countEmg = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afa120421c9d5e9b7440d3ace3599a822" name="afa120421c9d5e9b7440d3ace3599a822"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa120421c9d5e9b7440d3ace3599a822">&#9670;&#160;</a></span>countPed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int CharacterNavigationController.countPed = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8ff7483b09bfdecb71c6376fbe17ae3e" name="a8ff7483b09bfdecb71c6376fbe17ae3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ff7483b09bfdecb71c6376fbe17ae3e">&#9670;&#160;</a></span>isEmg</h2>
 
@@ -275,34 +250,6 @@ Public Attributes</h2></td></tr>
 <p>The flag for determining a pedestrian </p>
 
 <p class="reference">Referenced by <a class="el" href="class_character_navigation_controller.html#ac67172858d070f091f8b22e731b9a614">Update()</a>.</p>
-
-</div>
-</div>
-<a id="a6ab951fea60d7f58915fee435ee9f77a" name="a6ab951fea60d7f58915fee435ee9f77a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ab951fea60d7f58915fee435ee9f77a">&#9670;&#160;</a></span>keepGoingTestEmg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool CharacterNavigationController.keepGoingTestEmg = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2205628d3b7d243a074312c673085efd" name="a2205628d3b7d243a074312c673085efd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2205628d3b7d243a074312c673085efd">&#9670;&#160;</a></span>keepGoingTestPed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool CharacterNavigationController.keepGoingTestPed = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -345,7 +292,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float CharacterNavigationController.rotationSpeed = 0.5f</td>
+          <td class="memname">float CharacterNavigationController.rotationSpeed = 300f</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -372,37 +319,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="acb3a1228f6ae5177d65d0c553bfe6aa6" name="acb3a1228f6ae5177d65d0c553bfe6aa6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb3a1228f6ae5177d65d0c553bfe6aa6">&#9670;&#160;</a></span>tempV3Emg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector3 CharacterNavigationController.tempV3Emg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adeef8cbc20a8f4327d334de0f673aba3" name="adeef8cbc20a8f4327d334de0f673aba3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adeef8cbc20a8f4327d334de0f673aba3">&#9670;&#160;</a></span>tempV3Ped</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector3 CharacterNavigationController.tempV3Ped</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Testing variables </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Dylan Stewart/Documents/GitHub/Project-Baxter-Sim---Team-Matrix/Matrix_CI_TrafficFlow/Assets/Scripts/<a class="el" href="_character_navigation_controller_8cs.html">CharacterNavigationController.cs</a></li>
+<li>C:/Users/Dylan Stewart/Documents/GitHub/Project-Baxter-Sim---Team-Matrix/Matrix_CI_TrafficFlow/Assets/Scripts/AI/<a class="el" href="_character_navigation_controller_8cs.html">CharacterNavigationController.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

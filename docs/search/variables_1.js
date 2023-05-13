@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['carcount_0',['carCount',['../class_resource_manager.html#ad10474893246845b6800a341ee72e598',1,'ResourceManager']]],
-  ['carcounttext_1',['carCountText',['../class_resource_manager.html#a8ef533f7747b6b11a682d8c08a5beb63',1,'ResourceManager']]],
-  ['countemg_2',['countEmg',['../class_character_navigation_controller.html#a373eeb59b279a081b8e1462186f04883',1,'CharacterNavigationController']]],
-  ['countped_3',['countPed',['../class_character_navigation_controller.html#afa120421c9d5e9b7440d3ace3599a822',1,'CharacterNavigationController']]],
-  ['currentwaypoint_4',['currentWaypoint',['../class_waypoint_nav.html#a392e1e94fe5f2c6a3d0505d9529754b0',1,'WaypointNav']]]
+  ['branches_0',['branches',['../class_waypoint.html#a24e71c14f0b991993204795fbb9f8dae',1,'Waypoint']]],
+  ['branchratio_1',['branchRatio',['../class_waypoint.html#afb87178205e242e2fd32e5b255312289',1,'Waypoint']]]
 ];

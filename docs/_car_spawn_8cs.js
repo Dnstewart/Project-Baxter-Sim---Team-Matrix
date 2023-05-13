@@ -1,4 +1,4 @@
 var _car_spawn_8cs =
 [
-    [ "CarSpawn", "class_car_spawn.html", null ]
+    [ "CarSpawn", "class_car_spawn.html", "class_car_spawn" ]
 ];

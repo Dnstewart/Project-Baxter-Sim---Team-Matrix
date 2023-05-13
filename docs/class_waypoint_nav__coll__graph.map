@@ -1,5 +1,6 @@
 <map id="WaypointNav" name="WaypointNav">
-<area shape="rect" id="node1" title=" " alt="" coords="17,172,115,197"/>
+<area shape="rect" id="node1" title="WaypointNav is used to navigate a Waypoint network. For the purpose of the Baxter simulation,..." alt="" coords="11,172,110,197"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,116,31"/>
-<area shape="rect" id="node3" href="$class_waypoint.html" title=" " alt="" coords="82,82,159,107"/>
+<area shape="rect" id="node3" href="$class_waypoint.html" title="Waypoint class, This class is used to make a linked list of waypoints. There is a branch list to bran..." alt="" coords="22,82,99,107"/>
+<area shape="rect" id="node4" href="$class_parking_lot.html" title="This class is used to operate the parking lot cars, when pedestrians get to a parking lot they are de..." alt="" coords="251,82,335,107"/>
 </map>

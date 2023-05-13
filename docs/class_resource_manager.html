@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Inital Matrix docs: ResourceManager Class Reference</title>
+<title>CI Baxter Traffic Sim: ResourceManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Inital Matrix docs
+   <div id="projectname">CI Baxter Traffic Sim
    </div>
-   <div id="projectbrief">Baxter Sim</div>
   </td>
  </tr>
  </tbody>
@@ -91,18 +90,22 @@ $(document).ready(function(){initNavTree('class_resource_manager.html',''); init
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_resource_manager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ResourceManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_resource_manager.html" title="ResourceManager is a class that is attached to a GameObject to control and keep track of different si...">ResourceManager</a> is a class that is attached to a GameObject to control and keep track of different simulation elements.  
+ <a href="class_resource_manager.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ResourceManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_resource_manager__inherit__graph.png" border="0" usemap="#a_resource_manager_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_resource_manager_inherit__map" id="a_resource_manager_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,79,132,104"/>
+<area shape="rect" title="ResourceManager is a class that is attached to a GameObject to control and keep track of different si..." alt="" coords="5,79,132,104"/>
 <area shape="rect" title=" " alt="" coords="13,5,124,31"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -111,11 +114,37 @@ Collaboration diagram for ResourceManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_resource_manager__coll__graph.png" border="0" usemap="#a_resource_manager_coll__map" alt="Collaboration graph"/></div>
 <map name="a_resource_manager_coll__map" id="a_resource_manager_coll__map">
-<area shape="rect" title=" " alt="" coords="5,79,132,104"/>
+<area shape="rect" title="ResourceManager is a class that is attached to a GameObject to control and keep track of different si..." alt="" coords="5,79,132,104"/>
 <area shape="rect" title=" " alt="" coords="13,5,124,31"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a86955993a69614b312a2e2cb26544dd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5">Start</a> ()</td></tr>
+<tr class="memdesc:a86955993a69614b312a2e2cb26544dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5" title="Start() is called before the first frame, Start() initalizes the global variables,...">Start()</a> is called before the first frame, <a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5" title="Start() is called before the first frame, Start() initalizes the global variables,...">Start()</a> initalizes the global variables, calls <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857" title="Updates the UI text.">ShowResources()</a>, and <a class="el" href="class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b" title="Sets the global time scale to 0 to pause the simulation.">PauseSim()</a>.  <br /></td></tr>
+<tr class="separator:a86955993a69614b312a2e2cb26544dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f9b9612d9ba254aca125f695201381"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381">Update</a> ()</td></tr>
+<tr class="memdesc:a73f9b9612d9ba254aca125f695201381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every frame <a class="el" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on...">Update()</a> checks if the p key was pressed and calls <a class="el" href="class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b" title="Sets the global time scale to 0 to pause the simulation.">PauseSim()</a> or <a class="el" href="class_resource_manager.html#ada56959c4735c64b7c39b3252e237b8f" title="Sets the global time scale to 1 to resume the simulation.">ResumeSim()</a> depending on the ready up flag. Also it updates the time variables, and calls <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857" title="Updates the UI text.">ShowResources()</a>.  <br /></td></tr>
+<tr class="separator:a73f9b9612d9ba254aca125f695201381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19fc088dca99ad2256efd203da7ae454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a19fc088dca99ad2256efd203da7ae454">IncrementTime</a> ()</td></tr>
+<tr class="separator:a19fc088dca99ad2256efd203da7ae454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a624d2f8dcf5cc344fef1e1a66cc8ffe3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a624d2f8dcf5cc344fef1e1a66cc8ffe3">resetAdjust</a> ()</td></tr>
+<tr class="separator:a624d2f8dcf5cc344fef1e1a66cc8ffe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c818d30b8b6f082f8a841ebd16075b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b">PauseSim</a> ()</td></tr>
+<tr class="memdesc:a76c818d30b8b6f082f8a841ebd16075b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the global time scale to 0 to pause the simulation.  <br /></td></tr>
+<tr class="separator:a76c818d30b8b6f082f8a841ebd16075b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada56959c4735c64b7c39b3252e237b8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#ada56959c4735c64b7c39b3252e237b8f">ResumeSim</a> ()</td></tr>
+<tr class="memdesc:ada56959c4735c64b7c39b3252e237b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the global time scale to 1 to resume the simulation.  <br /></td></tr>
+<tr class="separator:ada56959c4735c64b7c39b3252e237b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a428f982a45d39da32f834726b4ed6857"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857">ShowResources</a> ()</td></tr>
+<tr class="memdesc:a428f982a45d39da32f834726b4ed6857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the UI text.  <br /></td></tr>
+<tr class="separator:a428f982a45d39da32f834726b4ed6857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb891d9e28c5e03e480cf05d5a97c8ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#acb891d9e28c5e03e480cf05d5a97c8ff">AdjustPedLimit</a> (float newLimit)</td></tr>
+<tr class="separator:acb891d9e28c5e03e480cf05d5a97c8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6580689fa6b2f3ccece2a3777b0ca88a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a6580689fa6b2f3ccece2a3777b0ca88a">AdjustAmbientLimit</a> (float newLimit)</td></tr>
+<tr class="separator:a6580689fa6b2f3ccece2a3777b0ca88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a238252b78270c33b19ea4bcc1648a976"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a238252b78270c33b19ea4bcc1648a976">timeText</a></td></tr>
@@ -128,6 +157,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ad10474893246845b6800a341ee72e598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadb924b6abe6be38af6fa34fb652a9a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#aadb924b6abe6be38af6fa34fb652a9a2">pedCount</a></td></tr>
 <tr class="separator:aadb924b6abe6be38af6fa34fb652a9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac10a2dd8a0c4c302c7bd22cc7b50fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a7ac10a2dd8a0c4c302c7bd22cc7b50fc">pedsSpawned</a> = 0</td></tr>
+<tr class="separator:a7ac10a2dd8a0c4c302c7bd22cc7b50fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd627f4970e1e0cf3039a5d1b3a07f6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#acd627f4970e1e0cf3039a5d1b3a07f6f">carCountA</a></td></tr>
+<tr class="separator:acd627f4970e1e0cf3039a5d1b3a07f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f4562b398270dbe84e93a39892ce79a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a0f4562b398270dbe84e93a39892ce79a">pedLimit</a> = 250</td></tr>
+<tr class="separator:a0f4562b398270dbe84e93a39892ce79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc692d6cae52531e9aad43c0f22d7fbe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#abc692d6cae52531e9aad43c0f22d7fbe">ambientLimit</a> = 25</td></tr>
+<tr class="separator:abc692d6cae52531e9aad43c0f22d7fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -137,8 +174,276 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a6d652c8310a92f46fcb67360dca671e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bdb9a44e1f872ad7a2b98863107d937"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a7bdb9a44e1f872ad7a2b98863107d937">readyUp</a> = false</td></tr>
 <tr class="separator:a7bdb9a44e1f872ad7a2b98863107d937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f2bb6cccdf38e193c28572556e9afe"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a67f2bb6cccdf38e193c28572556e9afe">initialAdjust</a> = false</td></tr>
+<tr class="separator:a67f2bb6cccdf38e193c28572556e9afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_resource_manager.html" title="ResourceManager is a class that is attached to a GameObject to control and keep track of different si...">ResourceManager</a> is a class that is attached to a GameObject to control and keep track of different simulation elements. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6580689fa6b2f3ccece2a3777b0ca88a" name="a6580689fa6b2f3ccece2a3777b0ca88a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6580689fa6b2f3ccece2a3777b0ca88a">&#9670;&#160;</a></span>AdjustAmbientLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager.AdjustAmbientLimit </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>newLimit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="class_resource_manager.html#abc692d6cae52531e9aad43c0f22d7fbe">ambientLimit</a>.</p>
+
+</div>
+</div>
+<a id="acb891d9e28c5e03e480cf05d5a97c8ff" name="acb891d9e28c5e03e480cf05d5a97c8ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb891d9e28c5e03e480cf05d5a97c8ff">&#9670;&#160;</a></span>AdjustPedLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager.AdjustPedLimit </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>newLimit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="class_resource_manager.html#a0f4562b398270dbe84e93a39892ce79a">pedLimit</a>.</p>
+
+</div>
+</div>
+<a id="a19fc088dca99ad2256efd203da7ae454" name="a19fc088dca99ad2256efd203da7ae454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19fc088dca99ad2256efd203da7ae454">&#9670;&#160;</a></span>IncrementTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager.IncrementTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="class_resource_manager.html#a67f2bb6cccdf38e193c28572556e9afe">initialAdjust</a>, <a class="el" href="class_resource_manager.html#a6d652c8310a92f46fcb67360dca671e1">minutes</a>, <a class="el" href="class_resource_manager.html#a7bdb9a44e1f872ad7a2b98863107d937">readyUp</a>, and <a class="el" href="class_resource_manager.html#acc9cd51a1ca7cedf9743e1cefa5907de">seconds</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381">Update()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_resource_manager_a19fc088dca99ad2256efd203da7ae454_icgraph.png" border="0" usemap="#aclass_resource_manager_a19fc088dca99ad2256efd203da7ae454_icgraph" alt=""/></div>
+<map name="aclass_resource_manager_a19fc088dca99ad2256efd203da7ae454_icgraph" id="aclass_resource_manager_a19fc088dca99ad2256efd203da7ae454_icgraph">
+<area shape="rect" title=" " alt="" coords="225,5,441,31"/>
+<area shape="rect" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on..." alt="" coords="5,5,177,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a76c818d30b8b6f082f8a841ebd16075b" name="a76c818d30b8b6f082f8a841ebd16075b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c818d30b8b6f082f8a841ebd16075b">&#9670;&#160;</a></span>PauseSim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager.PauseSim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the global time scale to 0 to pause the simulation. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5">Start()</a>, and <a class="el" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381">Update()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_resource_manager_a76c818d30b8b6f082f8a841ebd16075b_icgraph.png" border="0" usemap="#aclass_resource_manager_a76c818d30b8b6f082f8a841ebd16075b_icgraph" alt=""/></div>
+<map name="aclass_resource_manager_a76c818d30b8b6f082f8a841ebd16075b_icgraph" id="aclass_resource_manager_a76c818d30b8b6f082f8a841ebd16075b_icgraph">
+<area shape="rect" title="Sets the global time scale to 0 to pause the simulation." alt="" coords="225,31,416,56"/>
+<area shape="rect" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5" title="Start() is called before the first frame, Start() initalizes the global variables,..." alt="" coords="12,5,171,31"/>
+<area shape="rect" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on..." alt="" coords="5,55,177,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a624d2f8dcf5cc344fef1e1a66cc8ffe3" name="a624d2f8dcf5cc344fef1e1a66cc8ffe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a624d2f8dcf5cc344fef1e1a66cc8ffe3">&#9670;&#160;</a></span>resetAdjust()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager.resetAdjust </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="class_resource_manager.html#a67f2bb6cccdf38e193c28572556e9afe">initialAdjust</a>, and <a class="el" href="class_resource_manager.html#a7bdb9a44e1f872ad7a2b98863107d937">readyUp</a>.</p>
+
+</div>
+</div>
+<a id="ada56959c4735c64b7c39b3252e237b8f" name="ada56959c4735c64b7c39b3252e237b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada56959c4735c64b7c39b3252e237b8f">&#9670;&#160;</a></span>ResumeSim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager.ResumeSim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the global time scale to 1 to resume the simulation. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381">Update()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_resource_manager_ada56959c4735c64b7c39b3252e237b8f_icgraph.png" border="0" usemap="#aclass_resource_manager_ada56959c4735c64b7c39b3252e237b8f_icgraph" alt=""/></div>
+<map name="aclass_resource_manager_ada56959c4735c64b7c39b3252e237b8f_icgraph" id="aclass_resource_manager_ada56959c4735c64b7c39b3252e237b8f_icgraph">
+<area shape="rect" title="Sets the global time scale to 1 to resume the simulation." alt="" coords="225,5,428,31"/>
+<area shape="rect" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on..." alt="" coords="5,5,177,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a428f982a45d39da32f834726b4ed6857" name="a428f982a45d39da32f834726b4ed6857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a428f982a45d39da32f834726b4ed6857">&#9670;&#160;</a></span>ShowResources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager.ShowResources </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the UI text. </p>
+
+<p class="reference">References <a class="el" href="class_resource_manager.html#ad10474893246845b6800a341ee72e598">carCount</a>, <a class="el" href="class_resource_manager.html#a6d652c8310a92f46fcb67360dca671e1">minutes</a>, <a class="el" href="class_resource_manager.html#aadb924b6abe6be38af6fa34fb652a9a2">pedCount</a>, and <a class="el" href="class_resource_manager.html#acc9cd51a1ca7cedf9743e1cefa5907de">seconds</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5">Start()</a>, and <a class="el" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381">Update()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_resource_manager_a428f982a45d39da32f834726b4ed6857_icgraph.png" border="0" usemap="#aclass_resource_manager_a428f982a45d39da32f834726b4ed6857_icgraph" alt=""/></div>
+<map name="aclass_resource_manager_a428f982a45d39da32f834726b4ed6857_icgraph" id="aclass_resource_manager_a428f982a45d39da32f834726b4ed6857_icgraph">
+<area shape="rect" title="Updates the UI text." alt="" coords="225,31,451,56"/>
+<area shape="rect" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5" title="Start() is called before the first frame, Start() initalizes the global variables,..." alt="" coords="12,5,171,31"/>
+<area shape="rect" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on..." alt="" coords="5,55,177,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a86955993a69614b312a2e2cb26544dd5" name="a86955993a69614b312a2e2cb26544dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86955993a69614b312a2e2cb26544dd5">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5" title="Start() is called before the first frame, Start() initalizes the global variables,...">Start()</a> is called before the first frame, <a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5" title="Start() is called before the first frame, Start() initalizes the global variables,...">Start()</a> initalizes the global variables, calls <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857" title="Updates the UI text.">ShowResources()</a>, and <a class="el" href="class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b" title="Sets the global time scale to 0 to pause the simulation.">PauseSim()</a>. </p>
+
+<p class="reference">References <a class="el" href="class_resource_manager.html#a6d652c8310a92f46fcb67360dca671e1">minutes</a>, <a class="el" href="class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b">PauseSim()</a>, <a class="el" href="class_resource_manager.html#a7bdb9a44e1f872ad7a2b98863107d937">readyUp</a>, <a class="el" href="class_resource_manager.html#acc9cd51a1ca7cedf9743e1cefa5907de">seconds</a>, and <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857">ShowResources()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_resource_manager_a86955993a69614b312a2e2cb26544dd5_cgraph.png" border="0" usemap="#aclass_resource_manager_a86955993a69614b312a2e2cb26544dd5_cgraph" alt=""/></div>
+<map name="aclass_resource_manager_a86955993a69614b312a2e2cb26544dd5_cgraph" id="aclass_resource_manager_a86955993a69614b312a2e2cb26544dd5_cgraph">
+<area shape="rect" title="Start() is called before the first frame, Start() initalizes the global variables,..." alt="" coords="5,31,164,56"/>
+<area shape="rect" href="class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b" title="Sets the global time scale to 0 to pause the simulation." alt="" coords="229,5,420,31"/>
+<area shape="rect" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857" title="Updates the UI text." alt="" coords="212,55,437,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a73f9b9612d9ba254aca125f695201381" name="a73f9b9612d9ba254aca125f695201381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f9b9612d9ba254aca125f695201381">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Every frame <a class="el" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on...">Update()</a> checks if the p key was pressed and calls <a class="el" href="class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b" title="Sets the global time scale to 0 to pause the simulation.">PauseSim()</a> or <a class="el" href="class_resource_manager.html#ada56959c4735c64b7c39b3252e237b8f" title="Sets the global time scale to 1 to resume the simulation.">ResumeSim()</a> depending on the ready up flag. Also it updates the time variables, and calls <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857" title="Updates the UI text.">ShowResources()</a>. </p>
+
+<p class="reference">References <a class="el" href="class_resource_manager.html#a19fc088dca99ad2256efd203da7ae454">IncrementTime()</a>, <a class="el" href="class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b">PauseSim()</a>, <a class="el" href="class_resource_manager.html#aadb924b6abe6be38af6fa34fb652a9a2">pedCount</a>, <a class="el" href="class_resource_manager.html#a7bdb9a44e1f872ad7a2b98863107d937">readyUp</a>, <a class="el" href="class_resource_manager.html#ada56959c4735c64b7c39b3252e237b8f">ResumeSim()</a>, and <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857">ShowResources()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_resource_manager_a73f9b9612d9ba254aca125f695201381_cgraph.png" border="0" usemap="#aclass_resource_manager_a73f9b9612d9ba254aca125f695201381_cgraph" alt=""/></div>
+<map name="aclass_resource_manager_a73f9b9612d9ba254aca125f695201381_cgraph" id="aclass_resource_manager_a73f9b9612d9ba254aca125f695201381_cgraph">
+<area shape="rect" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on..." alt="" coords="5,80,177,105"/>
+<area shape="rect" href="class_resource_manager.html#a19fc088dca99ad2256efd203da7ae454" title=" " alt="" coords="230,5,446,31"/>
+<area shape="rect" href="class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b" title="Sets the global time scale to 0 to pause the simulation." alt="" coords="243,55,433,80"/>
+<area shape="rect" href="class_resource_manager.html#ada56959c4735c64b7c39b3252e237b8f" title="Sets the global time scale to 1 to resume the simulation." alt="" coords="237,104,439,129"/>
+<area shape="rect" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857" title="Updates the UI text." alt="" coords="225,153,451,179"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="abc692d6cae52531e9aad43c0f22d7fbe" name="abc692d6cae52531e9aad43c0f22d7fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc692d6cae52531e9aad43c0f22d7fbe">&#9670;&#160;</a></span>ambientLimit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ResourceManager.ambientLimit = 25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a6580689fa6b2f3ccece2a3777b0ca88a">AdjustAmbientLimit()</a>.</p>
+
+</div>
+</div>
 <a id="ad10474893246845b6800a341ee72e598" name="ad10474893246845b6800a341ee72e598"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad10474893246845b6800a341ee72e598">&#9670;&#160;</a></span>carCount</h2>
 
@@ -147,6 +452,23 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int ResourceManager.carCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the car count </p>
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857">ShowResources()</a>.</p>
+
+</div>
+</div>
+<a id="acd627f4970e1e0cf3039a5d1b3a07f6f" name="acd627f4970e1e0cf3039a5d1b3a07f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd627f4970e1e0cf3039a5d1b3a07f6f">&#9670;&#160;</a></span>carCountA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ResourceManager.carCountA</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -164,6 +486,32 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>stores a text UI object for the car count. <br  />
+ </p>
+
+</div>
+</div>
+<a id="a67f2bb6cccdf38e193c28572556e9afe" name="a67f2bb6cccdf38e193c28572556e9afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f2bb6cccdf38e193c28572556e9afe">&#9670;&#160;</a></span>initialAdjust</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ResourceManager.initialAdjust = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a19fc088dca99ad2256efd203da7ae454">IncrementTime()</a>, and <a class="el" href="class_resource_manager.html#a624d2f8dcf5cc344fef1e1a66cc8ffe3">resetAdjust()</a>.</p>
 
 </div>
 </div>
@@ -186,6 +534,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stores the Minutes </p>
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a19fc088dca99ad2256efd203da7ae454">IncrementTime()</a>, <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857">ShowResources()</a>, and <a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5">Start()</a>.</p>
 
 </div>
 </div>
@@ -200,6 +551,9 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Stores the pedestrian count </p>
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857">ShowResources()</a>, and <a class="el" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381">Update()</a>.</p>
 
 </div>
 </div>
@@ -211,6 +565,38 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">Text ResourceManager.pedCountText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>stores a text UI object for the pedestrian count. <br  />
+ </p>
+
+</div>
+</div>
+<a id="a0f4562b398270dbe84e93a39892ce79a" name="a0f4562b398270dbe84e93a39892ce79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f4562b398270dbe84e93a39892ce79a">&#9670;&#160;</a></span>pedLimit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ResourceManager.pedLimit = 250</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#acb891d9e28c5e03e480cf05d5a97c8ff">AdjustPedLimit()</a>.</p>
+
+</div>
+</div>
+<a id="a7ac10a2dd8a0c4c302c7bd22cc7b50fc" name="a7ac10a2dd8a0c4c302c7bd22cc7b50fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac10a2dd8a0c4c302c7bd22cc7b50fc">&#9670;&#160;</a></span>pedsSpawned</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ResourceManager.pedsSpawned = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -236,6 +622,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>acts as a flag for pausing and unpausing. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a19fc088dca99ad2256efd203da7ae454">IncrementTime()</a>, <a class="el" href="class_resource_manager.html#a624d2f8dcf5cc344fef1e1a66cc8ffe3">resetAdjust()</a>, <a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5">Start()</a>, and <a class="el" href="class_resource_manager.html#a73f9b9612d9ba254aca125f695201381">Update()</a>.</p>
 
 </div>
 </div>
@@ -258,6 +647,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stores the seconds </p>
+
+<p class="reference">Referenced by <a class="el" href="class_resource_manager.html#a19fc088dca99ad2256efd203da7ae454">IncrementTime()</a>, <a class="el" href="class_resource_manager.html#a428f982a45d39da32f834726b4ed6857">ShowResources()</a>, and <a class="el" href="class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5">Start()</a>.</p>
 
 </div>
 </div>
@@ -272,11 +664,12 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>stores a text UI object for the time. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Dylan Stewart/Documents/GitHub/Project-Baxter-Sim---Team-Matrix/Matrix_CI_TrafficFlow/Assets/Scripts/<a class="el" href="_resource_manager_8cs.html">ResourceManager.cs</a></li>
+<li>C:/Users/Dylan Stewart/Documents/GitHub/Project-Baxter-Sim---Team-Matrix/Matrix_CI_TrafficFlow/Assets/Scripts/Resource Handler/<a class="el" href="_resource_manager_8cs.html">ResourceManager.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

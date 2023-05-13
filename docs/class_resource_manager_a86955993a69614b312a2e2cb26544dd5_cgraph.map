@@ -1,0 +1,5 @@
+<map id="ResourceManager.Start" name="ResourceManager.Start">
+<area shape="rect" id="node1" title="Start() is called before the first frame, Start() initalizes the global variables,..." alt="" coords="5,31,164,56"/>
+<area shape="rect" id="node2" href="$class_resource_manager.html#a76c818d30b8b6f082f8a841ebd16075b" title="Sets the global time scale to 0 to pause the simulation." alt="" coords="229,5,420,31"/>
+<area shape="rect" id="node3" href="$class_resource_manager.html#a428f982a45d39da32f834726b4ed6857" title="Updates the UI text." alt="" coords="212,55,437,80"/>
+</map>

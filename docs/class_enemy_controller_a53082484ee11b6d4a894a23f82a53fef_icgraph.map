@@ -1,0 +1,4 @@
+<map id="EnemyController.FaceTarget" name="EnemyController.FaceTarget">
+<area shape="rect" id="node1" title="Make the object face the target." alt="" coords="216,5,403,31"/>
+<area shape="rect" id="node2" href="$class_enemy_controller.html#a41090510cff98622fe675d1f6e3ecd82" title="Update() activates the animations for each frame." alt="" coords="5,5,168,31"/>
+</map>

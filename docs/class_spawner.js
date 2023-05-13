@@ -1,4 +1,4 @@
 var class_spawner =
 [
-    [ "resourceManager", "class_spawner.html#ac79f019451581cae60ed65ec5809dbe2", null ]
+    [ "manager", "class_spawner.html#a285460f7c085f656da802963234cc49a", null ]
 ];

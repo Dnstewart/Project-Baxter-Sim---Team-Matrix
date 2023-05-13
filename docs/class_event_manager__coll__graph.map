@@ -1,0 +1,5 @@
+<map id="EventManager" name="EventManager">
+<area shape="rect" id="node1" title="This class is used to control the weather systems in the simulation. Made by Team Matrix." alt="" coords="14,168,118,193"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,31"/>
+<area shape="rect" id="node3" href="$class_resource_manager.html" title="ResourceManager is a class that is attached to a GameObject to control and keep track of different si..." alt="" coords="83,80,209,105"/>
+</map>

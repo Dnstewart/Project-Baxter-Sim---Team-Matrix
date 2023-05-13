@@ -1,0 +1,5 @@
+<map id="ResourceManager.ShowResources" name="ResourceManager.ShowResources">
+<area shape="rect" id="node1" title="Updates the UI text." alt="" coords="225,31,451,56"/>
+<area shape="rect" id="node2" href="$class_resource_manager.html#a86955993a69614b312a2e2cb26544dd5" title="Start() is called before the first frame, Start() initalizes the global variables,..." alt="" coords="12,5,171,31"/>
+<area shape="rect" id="node3" href="$class_resource_manager.html#a73f9b9612d9ba254aca125f695201381" title="Every frame Update() checks if the p key was pressed and calls PauseSim() or ResumeSim() depending on..." alt="" coords="5,55,177,80"/>
+</map>

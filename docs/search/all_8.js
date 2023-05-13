@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['minutes_0',['minutes',['../class_resource_manager.html#a6d652c8310a92f46fcb67360dca671e1',1,'ResourceManager']]],
-  ['move_1',['Move',['../class_car_controller.html#a2da4e0a255edcc3287a070195d6f0f0f',1,'CarController']]],
-  ['movespeed_2',['moveSpeed',['../class_character_navigation_controller.html#af221b1c4850eef2a1a639cda403e8675',1,'CharacterNavigationController']]]
+  ['incrementtime_0',['IncrementTime',['../class_resource_manager.html#a19fc088dca99ad2256efd203da7ae454',1,'ResourceManager']]],
+  ['initialadjust_1',['initialAdjust',['../class_resource_manager.html#a67f2bb6cccdf38e193c28572556e9afe',1,'ResourceManager']]],
+  ['instance_2',['Instance',['../class_player_manager.html#ab8c8a1bb47b5f3734c7c3ec2f4887f94',1,'PlayerManager']]],
+  ['isambient_3',['isAmbient',['../class_car_spawn.html#ad862f6b3ba0f8e420e18b31ce03c8bb6',1,'CarSpawn.isAmbient()'],['../class_waypoint_nav.html#a2b6c4291e50e64fd50dd5142c40e90cb',1,'WaypointNav.isAmbient()']]],
+  ['isemg_4',['isEmg',['../class_character_navigation_controller.html#a8ff7483b09bfdecb71c6376fbe17ae3e',1,'CharacterNavigationController']]],
+  ['isped_5',['isPed',['../class_character_navigation_controller.html#a57f198b338ed8ff1e617eab67aa4d8a6',1,'CharacterNavigationController']]]
 ];
